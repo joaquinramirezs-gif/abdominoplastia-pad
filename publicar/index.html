@@ -305,7 +305,7 @@ nav .btn:hover{color:#2E3033}
 .contacto .fila{
   margin-top:3rem;display:grid;gap:1px;background:var(--linea);
   border:1px solid var(--linea);
-  grid-template-columns:repeat(4,minmax(0,1fr));
+  grid-template-columns:.85fr 1.35fr 1.1fr .8fr;
 }
 @media (max-width:1000px){.contacto .fila{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.contacto .fila{grid-template-columns:1fr}}
@@ -314,9 +314,9 @@ nav .btn:hover{color:#2E3033}
   display:block;font-size:.7rem;font-weight:500;letter-spacing:.24em;
   text-transform:uppercase;color:var(--sage-deep);margin-bottom:.7rem;
 }
-.contacto .fila a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--gold)}
+.contacto .fila a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--gold);overflow-wrap:anywhere}
 .contacto .fila a:hover{color:var(--gold-deep)}
-.contacto .fila p{font-size:.97rem}
+.contacto .fila p{font-size:.97rem;overflow-wrap:anywhere}
 
 /* ── Pie ── */
 footer{border-top:1px solid var(--linea);padding:3.5rem 0 4rem;background:var(--paper)}
@@ -370,7 +370,7 @@ main section>.wrap{position:relative;z-index:1}
       <a href="#candidatas">Candidatas</a>
       <a href="#proceso">Proceso</a>
       <a href="#doctor">El cirujano</a>
-      <a href="#preguntas">Preguntas</a>
+      <a href="/preguntas-frecuentes">Preguntas</a>
       <a href="/blog">Blog</a>
       <a class="btn" href="https://wa.me/56944575535?text=Hola%2C%20quiero%20saber%20si%20soy%20candidata%20a%20la%20abdominoplastia%20con%20Bono%20PAD." target="_blank" rel="noopener noreferrer">WhatsApp</a>
     </nav>
@@ -650,61 +650,20 @@ main section>.wrap{position:relative;z-index:1}
     </div>
   </section>
 
-  <!-- ── Preguntas ── -->
-  <section id="preguntas" style="padding-top:0">
+  <!-- ── Preguntas (página aparte) ── -->
+  <section id="preguntas" class="tick">
     <div class="wrap">
       <span class="etiqueta rev">Preguntas frecuentes</span>
       <hr class="regla rev">
-      <h2 class="rev" style="margin-bottom:2.4rem">Dudas frecuentes sobre la guatita de delantal y el PAD</h2>
-      <div class="faq rev">
-        <details>
-          <summary>¿Qué es la «guatita de delantal»?</summary>
-          <p class="resp">Es el pliegue de piel y tejido que cae sobre el pubis
-          como un delantal, habitualmente después de embarazos o de una baja de
-          peso importante. Además de lo estético, puede producir rozaduras,
-          dermatitis e incomodidad para vestirse y moverse.</p>
-        </details>
-        <details>
-          <summary>¿El bono PAD incluye liposucción?</summary>
-          <p class="resp">No. El PAD cubre exclusivamente la abdominoplastia
-          tradicional: retiro de piel y reparación muscular. No incluye
-          liposucción ni tecnologías complementarias de definición corporal. Si
-          tu caso requiere manejo de grasa localizada, se conversa aparte en la
-          evaluación.</p>
-        </details>
-        <details>
-          <summary>¿Cómo sé si cumplo los requisitos?</summary>
-          <p class="resp">Nuestros criterios centrales: Fonasa B, C o D, menor
-          de 60 años, IMC bajo 25 (hasta 27 solo en casos especiales), pliegue
-          que cuelga al menos 5 cm y no fumar por 4 meses. El programa de
-          Fonasa contempla rangos más amplios —hasta IMC 30 y 65 años—, pero
-          en esos rangos nuestro equipo no opera. La forma más rápida de salir
-          de la duda es escribirnos por WhatsApp; la confirmación definitiva la
-          da la evaluación presencial. El detalle completo está en
-          <a href="/blog/requisitos-bono-pad">quién puede operarse con el bono PAD</a>.</p>
-        </details>
-        <details>
-          <summary>¿Cómo es la recuperación de la abdominoplastia?</summary>
-          <p class="resp">La cirugía contempla hospitalización, drenajes que se
-          retiran entre 7 y 12 días después, y reposo laboral de al menos 2
-          semanas, que varía según el tipo de trabajo. Es un procedimiento
-          quirúrgico mayor: seguir las indicaciones médicas al pie de la letra
-          es parte del tratamiento. En el blog está la
-          <a href="/blog/recuperacion-abdominoplastia">guía de recuperación semana a semana</a>.</p>
-        </details>
-        <details>
-          <summary>¿Los resultados son definitivos?</summary>
-          <p class="resp">La cirugía corrige la piel sobrante y la musculatura,
-          pero el resultado depende también de lo que venga después: subidas
-          importantes de peso o nuevos embarazos pueden modificarlo. Mantener
-          hábitos saludables ayuda a conservarlo en el tiempo.</p>
-        </details>
-        <details>
-          <summary>¿Qué pasa si no soy Fonasa B, C o D?</summary>
-          <p class="resp">El bono PAD es un beneficio exclusivo de esos tramos.
-          Si estás en otro tramo o en Isapre, igual podemos evaluar tu caso y
-          orientarte sobre las alternativas; escríbenos por WhatsApp.</p>
-        </details>
+      <h2 class="rev">¿Te quedan dudas?</h2>
+      <p class="rev" style="margin:1.8rem 0 2.6rem;color:var(--grey)">
+        Reunimos en una sola página las diez preguntas que más se repiten en la
+        consulta: qué cubre el bono, cuánto se paga, quién puede operarse, cómo
+        es la recuperación y cómo agendar.
+      </p>
+      <div class="acciones rev">
+        <a class="btn" href="/preguntas-frecuentes">Ver preguntas frecuentes</a>
+        <a class="enlace" href="https://wa.me/56944575535?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20la%20abdominoplastia%20con%20Bono%20PAD." target="_blank" rel="noopener noreferrer">Preguntar por WhatsApp</a>
       </div>
     </div>
   </section>
@@ -766,7 +725,9 @@ main section>.wrap{position:relative;z-index:1}
       informado.
     </p>
     <div class="redes">
+      <a href="/preguntas-frecuentes">Preguntas frecuentes</a>
       <a href="/blog">Blog</a>
+      <a href="/privacidad">Política de privacidad</a>
       <a href="https://wa.me/56944575535" target="_blank" rel="noopener noreferrer">WhatsApp</a>
       <a href="https://www.instagram.com/abdominoplastiapad" target="_blank" rel="noopener noreferrer">Instagram</a>
       <a href="https://www.tiktok.com/@abdominoplastiapad" target="_blank" rel="noopener noreferrer">TikTok</a>
@@ -941,42 +902,6 @@ document.documentElement.classList.add('js');
         "addressRegion":"Región Metropolitana",
         "addressCountry":"CL"
       }
-    },
-    {
-      "@type":"FAQPage",
-      "@id":"https://www.abdominoplastiapad.com/#preguntas",
-      "mainEntity":[
-        {
-          "@type":"Question",
-          "name":"¿Qué es la «guatita de delantal»?",
-          "acceptedAnswer":{"@type":"Answer","text":"Es el pliegue de piel y tejido que cae sobre el pubis como un delantal, habitualmente después de embarazos o de una baja de peso importante. Además de lo estético, puede producir rozaduras, dermatitis e incomodidad para vestirse y moverse."}
-        },
-        {
-          "@type":"Question",
-          "name":"¿El bono PAD incluye liposucción?",
-          "acceptedAnswer":{"@type":"Answer","text":"No. El PAD cubre exclusivamente la abdominoplastia tradicional: retiro de piel y reparación muscular. No incluye liposucción ni tecnologías complementarias de definición corporal. Si tu caso requiere manejo de grasa localizada, se conversa aparte en la evaluación."}
-        },
-        {
-          "@type":"Question",
-          "name":"¿Cómo sé si cumplo los requisitos?",
-          "acceptedAnswer":{"@type":"Answer","text":"Nuestros criterios centrales: Fonasa B, C o D, menor de 60 años, IMC bajo 25 (hasta 27 solo en casos especiales), pliegue que cuelga al menos 5 cm y no fumar por 4 meses. El programa de Fonasa contempla rangos más amplios —hasta IMC 30 y 65 años—, pero en esos rangos nuestro equipo no opera. La forma más rápida de salir de la duda es escribirnos por WhatsApp; la confirmación definitiva la da la evaluación presencial."}
-        },
-        {
-          "@type":"Question",
-          "name":"¿Cómo es la recuperación de la abdominoplastia?",
-          "acceptedAnswer":{"@type":"Answer","text":"La cirugía contempla hospitalización, drenajes que se retiran entre 7 y 12 días después, y reposo laboral de al menos 2 semanas, que varía según el tipo de trabajo. Es un procedimiento quirúrgico mayor: seguir las indicaciones médicas al pie de la letra es parte del tratamiento."}
-        },
-        {
-          "@type":"Question",
-          "name":"¿Los resultados son definitivos?",
-          "acceptedAnswer":{"@type":"Answer","text":"La cirugía corrige la piel sobrante y la musculatura, pero el resultado depende también de lo que venga después: subidas importantes de peso o nuevos embarazos pueden modificarlo. Mantener hábitos saludables ayuda a conservarlo en el tiempo."}
-        },
-        {
-          "@type":"Question",
-          "name":"¿Qué pasa si no soy Fonasa B, C o D?",
-          "acceptedAnswer":{"@type":"Answer","text":"El bono PAD es un beneficio exclusivo de esos tramos. Si estás en otro tramo o en Isapre, igual podemos evaluar tu caso y orientarte sobre las alternativas; escríbenos por WhatsApp."}
-        }
-      ]
     }
   ]
 }

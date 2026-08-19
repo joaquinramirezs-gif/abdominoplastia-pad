@@ -4,5 +4,12 @@
   "installCommand": "echo sin dependencias",
   "buildCommand": "echo sitio estatico, sin build",
   "outputDirectory": "publicar",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/blog/preguntas-frecuentes-pad",
+      "destination": "/preguntas-frecuentes",
+      "permanent": true
+    }
+  ]
 }
