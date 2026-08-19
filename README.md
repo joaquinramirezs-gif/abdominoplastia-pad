@@ -1,5 +1,18 @@
 # Abdominoplastia PAD — abdominoplastiapad.com
 
+> 🌐 **Publicado en Vercel: <https://abdominoplastia-pad.vercel.app>** (desde el
+> 2026-08-18). Repo: `github.com/joaquinramirezs-gif/abdominoplastia-pad`,
+> proyecto Vercel `abdominoplastia-pad` (equipo joaquin20). **No toca el
+> dominio real**, que sigue en Wix — mismo esquema paralelo que Leblon y JR.
+>
+> **Para publicar cambios:** editar las fuentes (`sitio-web.html`,
+> `blog.html`), regenerar `publicar/` y hacer push — Vercel despliega solo:
+> ```bash
+> sed 's|href="sitio-web\.html|href="/|g' sitio-web.html > publicar/index.html
+> sed 's|href="sitio-web\.html|href="/|g' blog.html > publicar/blog.html
+> git add -A && git commit -m "..." && git push
+> ```
+
 Maqueta nueva del sitio, creada el **2026-08-18** con las líneas de diseño de la
 casa (skill `paginas-web`). El sitio real vive en **Wix** (site ID
 `d7c99be0-30bf-4d02-8ab6-b4faca5f7119`) y no se puede editar por API — esta
