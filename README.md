@@ -6,11 +6,9 @@
 > dominio real**, que sigue en Wix — mismo esquema paralelo que Leblon y JR.
 >
 > **Para publicar cambios:** editar las fuentes (`sitio-web.html`,
-> `blog.html`), regenerar `publicar/` y hacer push — Vercel despliega solo:
+> `blog.html`, `blog/*.html`), regenerar `publicar/` y hacer push:
 > ```bash
-> sed 's|href="sitio-web\.html|href="/|g' sitio-web.html > publicar/index.html
-> sed 's|href="sitio-web\.html|href="/|g' blog.html > publicar/blog.html
-> git add -A && git commit -m "..." && git push
+> ./publicar.sh && git add -A && git commit -m "..." && git push
 > ```
 
 Maqueta nueva del sitio, creada el **2026-08-18** con las líneas de diseño de la
