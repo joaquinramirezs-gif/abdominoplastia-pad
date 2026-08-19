@@ -20,7 +20,10 @@ aparte cuando se decida.
 | Archivo | Qué es |
 |---|---|
 | `sitio-web.html` | ⭐ La maqueta vigente. Un solo archivo, se abre con doble clic |
-| `blog.html` | El blog: los 4 artículos completos del sitio Wix, en una sola página con índice y anclas |
+| `blog.html` | Índice del blog (portada + tarjetas) |
+| `blog/*.html` | Los 4 artículos, **una URL por artículo** (decisión SEO 2026-08-18): requisitos-bono-pad, recuperacion-abdominoplastia, preguntas-frecuentes-pad, plicaturas-abdominales |
+| `publicar.sh` | Regenera `publicar/` reescribiendo los enlaces relativos a URLs limpias |
+| `icon-192.png` | Favicon cuadrado (monograma sobre crema) |
 | `JR-monograma-transparente.png` | Monograma JR (copiado de `dr-joaquin-ramirez/logos/`) |
 | `retrato-joaquin-ramirez.jpg` | Retrato del doctor (copiado de `dr-joaquin-ramirez/fotos/`, ya en sRGB) |
 
@@ -79,10 +82,34 @@ Spotify (`show/3WAZH5wDXqHfwVPTGVhRtO`).
 - ~~El blog~~ → **replicado el 2026-08-18 en `blog.html`**: los 4 artículos
   completos (requisitos / recuperación / FAQ / plicaturas), texto íntegro del
   sitio Wix con adaptaciones mínimas (se quitó la mención al formulario de
-  contacto; cada artículo cierra en WhatsApp con mensaje propio). Ojo: el
-  sitio original tiene cifras que no calzan entre artículos (drenajes 7–12 vs
-  7–14 días; reposo 2 vs 3 semanas; faja 6 vs 8–12 semanas) — se mantuvieron
-  fieles a cada fuente, pendiente que el doctor unifique.
+  contacto; cada artículo cierra en WhatsApp con mensaje propio).
+  **2026-08-18: cifras unificadas en todo el sitio** tras la auditoría SEO —
+  drenajes **7–12 días**, reposo laboral **2 a 3 semanas según actividad**,
+  faja **8–12 semanas**, préstamo **$1.523.021** (para que cuadre con el pie
+  de $268.769), posparto «menor de 6 meses con lactancia activa». ⚠️
+  **Pendiente que el doctor confirme** estos cuatro criterios clínicos: se
+  eligió la variante del propio sitio más coherente, no un juicio médico
+  nuevo.
+
+## SEO (2026-08-18)
+
+Paquete aplicado tras auditoría multi-agente (19 hallazgos corregidos):
+- **Canonical al dominio real** en todas las páginas (la copia de Vercel no
+  compite contra el Wix; queda lista para la migración).
+- Title/description optimizados («Abdominoplastia con Bono PAD Fonasa —
+  Guatita de Delantal»), H1 y H2 con las keywords, Open Graph + Twitter.
+- **JSON-LD**: MedicalWebPage + SurgicalProcedure + Physician (CONACEM,
+  membresías, idiomas) + MedicalClinic + **FAQPage sincronizado palabra a
+  palabra con el FAQ visible** + Blog/BlogPosting por artículo.
+- **Blog en 4 URLs propias** con canonical, BlogPosting y bloque «sigue
+  leyendo» (enlazado interno). `/blog` es índice puro.
+- robots.txt + sitemap.xml (6 URLs, dominio real), favicon cuadrado,
+  imágenes con width/height + lazy, contenido visible sin JavaScript
+  (gating `.js`).
+- **Al migrar el dominio**: dar de alta la propiedad en Search Console,
+  enviar el sitemap, montar redirecciones 301 desde las URLs viejas de Wix
+  (`/que-es-la-abdominoplastia-pad`, `/post/*`, `/en`, `/pt`) y agregar la
+  etiqueta GA4/Google Ads. Sin eso no hay ranking que defender.
 - Las versiones **`/en/` y `/pt/`**.
 - El detalle curricular exhaustivo del doctor (fechas, TOEFL/CELPEBRAS, cursos
   en Columbia y Harvard) — resumido en la tarjeta, no listado.
