@@ -20,8 +20,10 @@ aparte cuando se decida.
 | Archivo | Qué es |
 |---|---|
 | `sitio-web.html` | ⭐ La maqueta vigente. Un solo archivo, se abre con doble clic |
+| `preguntas-frecuentes.html` | **Página propia del FAQ** (10 preguntas) — es la única con `FAQPage` JSON-LD |
+| `privacidad.html` | Política de privacidad (Ley 19.628, con trato especial de datos de salud) |
 | `blog.html` | Índice del blog (portada + tarjetas) |
-| `blog/*.html` | Los 4 artículos, **una URL por artículo** (decisión SEO 2026-08-18): requisitos-bono-pad, recuperacion-abdominoplastia, preguntas-frecuentes-pad, plicaturas-abdominales |
+| `blog/*.html` | Los 3 artículos, **una URL por artículo** (decisión SEO 2026-08-18): requisitos-bono-pad, recuperacion-abdominoplastia, plicaturas-abdominales |
 | `publicar.sh` | Regenera `publicar/` reescribiendo los enlaces relativos a URLs limpias |
 | `icon-192.png` | Favicon cuadrado (monograma sobre crema) |
 | `JR-monograma-transparente.png` | Monograma JR (copiado de `dr-joaquin-ramirez/logos/`) |
@@ -101,8 +103,14 @@ Paquete aplicado tras auditoría multi-agente (19 hallazgos corregidos):
 - **JSON-LD**: MedicalWebPage + SurgicalProcedure + Physician (CONACEM,
   membresías, idiomas) + MedicalClinic + **FAQPage sincronizado palabra a
   palabra con el FAQ visible** + Blog/BlogPosting por artículo.
-- **Blog en 4 URLs propias** con canonical, BlogPosting y bloque «sigue
+- **Blog en URLs propias** con canonical, BlogPosting y bloque «sigue
   leyendo» (enlazado interno). `/blog` es índice puro.
+- **FAQ consolidado en `/preguntas-frecuentes`** (2026-08-18): había dos FAQ
+  compitiendo —el de la portada y el artículo `blog/preguntas-frecuentes-pad`—.
+  Se fusionaron en una sola página de 10 preguntas, que es la única que lleva
+  `FAQPage` JSON-LD; el artículo del blog se eliminó con **redirect 301** hacia
+  ella en `vercel.json`. La portada solo conserva una tarjeta que enlaza ahí.
+- **`/privacidad`** enlazada desde el pie de todas las páginas.
 - robots.txt + sitemap.xml (6 URLs, dominio real), favicon cuadrado,
   imágenes con width/height + lazy, contenido visible sin JavaScript
   (gating `.js`).
