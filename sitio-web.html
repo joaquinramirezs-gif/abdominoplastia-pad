@@ -490,16 +490,19 @@ main section>.wrap{position:relative;z-index:1}
       <hr class="regla rev">
       <h2 class="rev">¿Eres candidata al PAD?</h2>
       <p class="rev" style="margin:1.8rem 0 3rem;color:var(--grey)">
-        El PAD tiene criterios definidos. Cumplirlos permite acceder al bono;
-        la indicación final siempre la da la evaluación médica presencial.
+        Estos son los criterios de nuestro equipo, definidos por seguridad y
+        calidad del resultado. <b style="font-weight:500;color:var(--ink)">El
+        programa PAD de Fonasa contempla rangos más amplios</b> —acepta hasta
+        IMC 30 y hasta 65 años—, pero en esos rangos nosotros no operamos. La
+        indicación final siempre la da la evaluación médica presencial.
       </p>
       <div class="lista dos rev">
         <div>
-          <h3>Criterios para acceder</h3>
+          <h3>Nuestros criterios</h3>
           <ul>
             <li>Afiliada a Fonasa, tramos B, C o D</li>
-            <li>Hasta 65 años</li>
-            <li>IMC menor a 25–27, según evaluación caso a caso</li>
+            <li>Menor de 60 años</li>
+            <li>IMC bajo 25 — hasta 27 solo en casos especiales, según evaluación</li>
             <li>Pliegue abdominal que cuelga al menos 5 cm bajo el pliegue inguinal</li>
             <li>Enfermedades crónicas compensadas</li>
             <li>Sin fumar durante al menos 4 meses</li>
@@ -650,11 +653,13 @@ main section>.wrap{position:relative;z-index:1}
         </details>
         <details>
           <summary>¿Cómo sé si cumplo los requisitos?</summary>
-          <p class="resp">Los criterios centrales son: Fonasa B, C o D, hasta
-          65 años, IMC menor a 25–27, pliegue que cuelga al menos 5 cm y no
-          fumar por 4 meses. La forma más rápida de salir de la duda es
-          escribirnos por WhatsApp; la confirmación definitiva la da la
-          evaluación presencial.</p>
+          <p class="resp">Nuestros criterios centrales: Fonasa B, C o D, menor
+          de 60 años, IMC bajo 25 (hasta 27 solo en casos especiales), pliegue
+          que cuelga al menos 5 cm y no fumar por 4 meses. El programa de
+          Fonasa contempla rangos más amplios —hasta IMC 30 y 65 años—, pero
+          en esos rangos nuestro equipo no opera. La forma más rápida de salir
+          de la duda es escribirnos por WhatsApp; la confirmación definitiva la
+          da la evaluación presencial.</p>
         </details>
         <details>
           <summary>¿Cómo es la recuperación?</summary>
@@ -823,13 +828,13 @@ main section>.wrap{position:relative;z-index:1}
     valor.textContent = txt;
     if (imc < 25){
       valor.style.color = 'var(--sage-deep)';
-      lectura.textContent = 'Dentro del criterio del PAD (IMC menor a 25–27). El siguiente paso es revisar el resto de los requisitos.';
+      lectura.textContent = 'Dentro de nuestro criterio (IMC bajo 25). El siguiente paso es revisar el resto de los requisitos.';
     } else if (imc <= 27){
       valor.style.color = 'var(--sage-deep)';
-      lectura.textContent = 'En el rango que el PAD evalúa caso a caso (25–27). Vale la pena conversarlo.';
+      lectura.textContent = 'En el rango que evaluamos solo en casos especiales (25–27). Vale la pena conversarlo.';
     } else if (imc <= 30){
       valor.style.color = 'var(--gold-deep)';
-      lectura.textContent = 'Sobre el criterio del PAD (25–27). Igual escríbenos: te orientamos sobre el camino para llegar.';
+      lectura.textContent = 'Sobre nuestro criterio (25–27). Fonasa acepta hasta 30, pero nosotros no operamos en ese rango — te orientamos sobre el camino para llegar.';
     } else {
       valor.style.color = 'var(--gold-deep)';
       lectura.textContent = 'Sobre 30, el límite para operar con seguridad. Te podemos orientar para bajarlo y reevaluar.';
