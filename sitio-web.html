@@ -191,6 +191,11 @@ nav .btn:hover{color:#2E3033}
 }
 .paga-grid p{font-size:.93rem;color:var(--grey);margin-top:.8rem}
 .paga-grid b{font-weight:500;color:var(--ink)}
+.paga-pie{
+  padding:1rem 1.8rem;border-top:1px solid var(--linea);background:var(--paper);
+  display:flex;flex-wrap:wrap;gap:.3rem 2.4rem;font-size:.8rem;color:var(--grey);
+}
+.paga-pie b{font-weight:500;color:var(--ink)}
 
 /* ── Criterios ── */
 .criterios ul{list-style:none;margin-top:1rem}
@@ -470,14 +475,17 @@ main section>.wrap{position:relative;z-index:1}
             devuelve en cuotas.</p>
           </div>
         </div>
+        <div class="paga-pie">
+          <span><b>Valor total del procedimiento</b> $3.583.580</span>
+          <span><b>Cubre Fonasa</b> $1.791.790</span>
+          <span><b>Préstamo médico</b> hasta $1.523.020 — el 85% del copago</span>
+          <span><b>Código PAD</b> 2505950</span>
+        </div>
       </div>
       <p class="nota rev">
-        Valores referenciales del arancel PAD de Fonasa (código 2505950),
-        sujetos a actualización. El valor total del procedimiento es
-        $3.583.580 —honorarios, pabellón y hospitalización incluidos— y Fonasa
-        cubre la mitad; el copago es la otra mitad. El acceso al préstamo
-        médico y su monto dependen de la evaluación que hace Fonasa en cada
-        caso.
+        Valores referenciales del arancel PAD de Fonasa, sujetos a
+        actualización. El acceso al préstamo médico y su monto dependen de la
+        evaluación que hace Fonasa en cada caso.
       </p>
     </div>
   </section>
