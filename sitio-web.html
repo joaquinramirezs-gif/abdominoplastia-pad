@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abdominoplastia con Bono PAD Fonasa en Santiago — Dr. Joaquín Ramírez</title>
+<meta name="description" content="Abdominoplastia para guatita de delantal con Bono PAD Fonasa: costo fijo y conocido, realizada por el Dr. Joaquín Ramírez, cirujano plástico. Requisitos, valores y proceso. Las Condes, Santiago.">
+<link rel="icon" type="image/png" href="JR-monograma-transparente.png">
+<style>
+:root{
+  --paper:#FFFFFF;
+  --cream:#FAF8F4;
+  --ink:#2E3033;
+  --grey:#58595B;
+  --sage:#86BE9C;
+  --sage-deep:#3F7256;
+  --sage-mist:#EDF5F0;
+  --gold:#CBB984;
+  --gold-deep:#8A7638;
+  --linea:#E7E2D8;
+  --sans:'Helvetica Neue',Helvetica,'Segoe UI',system-ui,-apple-system,Arial,sans-serif;
+  --ancho:1180px;
+  --gutter:clamp(1.5rem,5vw,4rem);
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#232825;
+    --cream:#1B1F1D;
+    --ink:#F0EDE6;
+    --grey:#A9AFA9;
+    --sage-deep:#9FD2B4;
+    --sage-mist:#202A24;
+    --gold:#DCC896;
+    --gold-deep:#E3D3A8;
+    --linea:#3A403C;
+  }
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  font-family:var(--sans);font-weight:400;color:var(--ink);background:var(--paper);
+  font-size:clamp(1rem,.97rem + .15vw,1.075rem);line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--ancho);margin:0 auto;padding:0 var(--gutter)}
+section{padding:clamp(5rem,6vw + 3rem,8.5rem) 0}
+h1,h2{font-weight:200;line-height:1.15;letter-spacing:.02em}
+h1{font-size:clamp(2.1rem,1.4rem + 3vw,3.6rem)}
+h2{font-size:clamp(1.9rem,1.3rem + 2.4vw,3.1rem)}
+h3{font-weight:300;font-size:clamp(1.15rem,1.05rem + .4vw,1.4rem);letter-spacing:.01em;line-height:1.35}
+p{max-width:62ch}
+a{color:var(--sage-deep)}
+.etiqueta{
+  display:block;font-size:.7rem;font-weight:500;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--sage-deep);margin-bottom:1.4rem;
+}
+.regla{width:56px;height:1px;background:var(--gold);border:0;margin:0 0 2rem}
+.btn{
+  display:inline-block;padding:.95rem 2.2rem;font-size:.76rem;font-weight:400;
+  text-transform:uppercase;letter-spacing:.2em;text-decoration:none;
+  border:1px solid var(--gold);color:var(--gold-deep);background:none;
+  transition:background .4s ease,color .4s ease;
+}
+.btn:hover,.btn:focus-visible{background:var(--gold);color:#2E3033}
+.enlace{
+  font-size:.76rem;text-transform:uppercase;letter-spacing:.2em;
+  color:var(--ink);text-decoration:none;border-bottom:1px solid var(--gold);
+  padding-bottom:.35rem;
+}
+.enlace:hover{color:var(--gold-deep)}
+
+/* ── Barra ── */
+header{
+  position:sticky;top:0;z-index:10;background:var(--paper);
+  border-bottom:1px solid var(--linea);
+}
+.barra{
+  max-width:var(--ancho);margin:0 auto;padding:.9rem var(--gutter);
+  display:flex;align-items:center;gap:2rem;
+}
+.marca{display:flex;align-items:center;gap:.9rem;text-decoration:none;color:var(--ink)}
+.marca img{height:34px;width:auto;display:block}
+.marca span{
+  font-size:.7rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;
+  line-height:1.5;white-space:nowrap;
+}
+.marca small{
+  display:block;font-size:.58rem;font-weight:400;letter-spacing:.24em;color:var(--grey);
+}
+nav{margin-left:auto;display:flex;align-items:center;gap:1.6rem}
+nav a{
+  font-size:.7rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--grey);text-decoration:none;white-space:nowrap;
+}
+nav a:hover{color:var(--sage-deep)}
+nav .btn{padding:.65rem 1.4rem;color:var(--gold-deep)}
+nav .btn:hover{color:#2E3033}
+@media (max-width:920px){nav a:not(.btn){display:none}}
+@media (max-width:600px){.marca span{display:none}}
+
+/* ── Hero ── */
+.hero{background:var(--cream);border-bottom:1px solid var(--linea);position:relative;overflow:hidden}
+.hero .wrap{
+  display:grid;grid-template-columns:minmax(0,7fr) minmax(240px,5fr);
+  gap:clamp(2rem,4vw,4.5rem);align-items:center;
+}
+.hero p.intro{margin:1.8rem 0 2.6rem;color:var(--grey)}
+.acciones{display:flex;flex-wrap:wrap;gap:1.2rem 1.8rem;align-items:center}
+.hero .dato{
+  grid-column:1/-1;margin-top:2.6rem;padding-top:1.6rem;border-top:1px solid var(--linea);
+  display:flex;flex-wrap:wrap;gap:.4rem 2.8rem;font-size:.85rem;color:var(--grey);
+}
+.hero .dato b{font-weight:500;color:var(--ink)}
+
+/* La figura: contorno en un trazo, se dibuja al cargar */
+.figura{display:flex;justify-content:center;min-width:0}
+.figura svg{
+  width:min(100%,380px);height:auto;overflow:visible;
+  animation:flotar 9s ease-in-out 2.4s infinite;
+}
+.trazo{fill:none;stroke:var(--sage);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}
+.trazo.fino{stroke-width:3}
+.trazo.oro{stroke:var(--gold);stroke-width:2.5}
+@keyframes flotar{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+
+/* Entrada escalonada del texto */
+@keyframes subir{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.sube{opacity:0;animation:subir .9s cubic-bezier(.22,.61,.36,1) forwards;animation-delay:var(--d,0s)}
+@keyframes crecer{to{width:56px}}
+.regla-anim{width:0;animation:crecer 1s cubic-bezier(.22,.61,.36,1) .3s forwards}
+
+@media (prefers-reduced-motion:reduce){
+  .sube{animation:none;opacity:1}
+  .regla-anim{animation:none;width:56px}
+  .figura svg{animation:none}
+}
+@media (max-width:880px){
+  .hero .wrap{display:block}
+  .figura{position:absolute;right:-70px;top:24px;width:290px;opacity:.13;pointer-events:none}
+  .figura svg{width:100%}
+  .hero .dato{margin-top:3.4rem}
+}
+
+/* ── Grillas con separador de un pixel ── */
+.lista{
+  display:grid;gap:1px;background:var(--linea);border:1px solid var(--linea);
+  list-style:none;
+}
+.lista>*{background:var(--paper);padding:2rem 1.8rem}
+.hero-fondo .lista>*, .alterna .lista>*{background:var(--cream)}
+.tres{grid-template-columns:repeat(3,minmax(0,1fr))}
+.dos{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:900px){.tres{grid-template-columns:1fr}}
+@media (max-width:720px){.dos{grid-template-columns:1fr}}
+.lista h3{margin-bottom:.6rem}
+.lista p{font-size:.95rem;color:var(--grey)}
+
+/* ── Cifras ── */
+.cifra .numero{
+  font-weight:200;font-size:clamp(1.7rem,1.2rem + 1.6vw,2.5rem);
+  letter-spacing:.01em;line-height:1.2;
+}
+.cifra .que{
+  font-size:.7rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--sage-deep);margin-bottom:.9rem;display:block;
+}
+.cifra p{font-size:.9rem;color:var(--grey);margin-top:.5rem}
+.nota{font-size:.85rem;color:var(--grey);margin-top:2rem;max-width:70ch}
+
+/* ── Criterios ── */
+.criterios ul{list-style:none;margin-top:1rem}
+.criterios li{
+  padding:.85rem 0 .85rem 1.7rem;border-bottom:1px solid var(--linea);
+  font-size:.97rem;position:relative;
+}
+.criterios li::before{
+  content:"";position:absolute;left:0;top:1.55rem;width:5px;height:5px;
+  border-radius:50%;background:var(--sage);
+}
+.criterios .no li::before{background:var(--gold)}
+.criterios li:last-child{border-bottom:none}
+
+/* ── Calculadora de IMC ── */
+.imc{
+  margin-top:2.6rem;display:grid;grid-template-columns:1fr 1fr;gap:1px;
+  background:var(--linea);border:1px solid var(--linea);
+}
+.imc>div{background:var(--cream);padding:clamp(1.8rem,3vw,2.6rem)}
+.imc h3{margin-bottom:.6rem}
+.imc-intro{font-size:.95rem;color:var(--grey)}
+.campos{display:grid;gap:1.6rem;margin-top:1.8rem}
+.campos label{
+  display:block;font-size:.7rem;font-weight:500;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--sage-deep);
+}
+.campos .campo{
+  display:flex;align-items:baseline;gap:.6rem;
+  border-bottom:1px solid var(--linea);transition:border-color .3s ease;
+}
+.campos .campo:focus-within{border-bottom-color:var(--sage-deep)}
+.campos input{
+  width:100%;min-width:0;border:0;background:none;color:var(--ink);
+  font-family:var(--sans);font-weight:200;font-size:1.9rem;
+  padding:.35rem 0;outline:none;
+}
+.campos input::placeholder{color:var(--linea)}
+.campos .unidad{font-size:.85rem;color:var(--grey)}
+.imc-res .que{
+  display:block;font-size:.7rem;font-weight:500;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--sage-deep);margin-bottom:.9rem;
+}
+#imc-valor{
+  font-weight:200;font-size:clamp(2.6rem,2rem + 2vw,4rem);line-height:1;
+  display:block;transition:color .3s ease;
+}
+#imc-lectura{font-size:.95rem;color:var(--grey);margin-top:1rem;min-height:3.4em}
+#imc-wsp{margin-top:1.4rem}
+.imc-ref{font-size:.78rem;color:var(--grey);margin-top:1.4rem}
+@media (max-width:720px){.imc{grid-template-columns:1fr}}
+
+/* ── Proceso ── */
+.paso .n{
+  font-weight:200;font-size:2.1rem;color:var(--gold-deep);display:block;
+  margin-bottom:1rem;
+}
+
+/* ── Doctor ── */
+.doctor-card{
+  display:grid;grid-template-columns:minmax(260px,2fr) 3fr;gap:1px;
+  background:var(--linea);border:1px solid var(--linea);
+  text-decoration:none;color:var(--ink);
+}
+.doctor-card>div{background:var(--paper);padding:0}
+.doctor-card .texto{padding:clamp(2rem,4vw,3.6rem)}
+.doctor-card img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/5}
+.doctor-card:hover h2{color:var(--sage-deep)}
+.doctor-card .cita{
+  font-weight:200;font-size:clamp(1.3rem,1.05rem + 1.15vw,2.05rem);line-height:1.35;
+  margin:1.8rem 0;
+}
+.doctor-card p{color:var(--grey);font-size:.97rem}
+.membresias{list-style:none;margin-top:2rem;font-size:.85rem;color:var(--grey)}
+.membresias li{padding:.55rem 0;border-top:1px solid var(--linea)}
+@media (max-width:640px){.doctor-card{grid-template-columns:1fr}}
+
+/* ── Preguntas ── */
+.faq{border-top:1px solid var(--linea)}
+.faq details{border-bottom:1px solid var(--linea)}
+.faq summary{
+  cursor:pointer;list-style:none;padding:1.4rem 2.5rem 1.4rem 0;
+  font-weight:300;font-size:1.1rem;position:relative;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";position:absolute;right:.2rem;top:50%;transform:translateY(-50%);
+  font-weight:200;font-size:1.5rem;color:var(--gold-deep);
+}
+.faq details[open] summary::after{content:"−"}
+.faq .resp{padding:0 0 1.6rem;color:var(--grey);font-size:.97rem}
+
+/* ── Contacto ── */
+.contacto{background:var(--sage-mist);border-top:1px solid var(--linea)}
+.contacto .fila{
+  margin-top:3rem;display:grid;gap:1px;background:var(--linea);
+  border:1px solid var(--linea);
+  grid-template-columns:repeat(4,minmax(0,1fr));
+}
+@media (max-width:1000px){.contacto .fila{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.contacto .fila{grid-template-columns:1fr}}
+.contacto .fila>div{background:var(--paper);padding:1.8rem}
+.contacto .fila .que{
+  display:block;font-size:.7rem;font-weight:500;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--sage-deep);margin-bottom:.7rem;
+}
+.contacto .fila a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--gold)}
+.contacto .fila a:hover{color:var(--gold-deep)}
+.contacto .fila p{font-size:.97rem}
+
+/* ── Pie ── */
+footer{border-top:1px solid var(--linea);padding:3.5rem 0 4rem;background:var(--paper)}
+footer .legal{font-size:.85rem;color:var(--grey);max-width:76ch}
+footer .legal + .legal{margin-top:1rem}
+footer .redes{margin-top:2.2rem;display:flex;flex-wrap:wrap;gap:2rem}
+footer .redes a{
+  font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--grey);text-decoration:none;border-bottom:1px solid var(--gold);
+  padding-bottom:.3rem;
+}
+footer .redes a:hover{color:var(--gold-deep)}
+
+/* ── El fondo: folios, hilos y el filete del monograma ── */
+main section{position:relative}
+main section>.wrap{position:relative;z-index:1}
+.tick::before{
+  content:"";position:absolute;left:50%;top:-40px;width:1px;height:80px;
+  background:var(--gold);
+}
+.folio{
+  position:absolute;top:clamp(2rem,4vw,4rem);right:var(--gutter);z-index:0;
+  font-weight:200;font-size:clamp(5.5rem,4rem + 6vw,9.5rem);line-height:1;
+  color:var(--linea);letter-spacing:.02em;user-select:none;pointer-events:none;
+}
+.hilo{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}
+.hilo svg{position:absolute;width:1600px;height:auto;will-change:transform}
+.hilo path{fill:none;stroke-width:1.5;stroke-linecap:round}
+
+/* ── Aparición al hacer scroll ── */
+.rev{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rev.visible{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .rev{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="barra">
+    <a class="marca" href="#inicio">
+      <img src="JR-monograma-transparente.png" alt="Monograma JR">
+      <span>Abdominoplastia PAD
+        <small>Dr. Joaquín Ramírez · Cirujano Plástico</small>
+      </span>
+    </a>
+    <nav aria-label="Secciones">
+      <a href="#que-es">Qué es</a>
+      <a href="#bono">El bono</a>
+      <a href="#candidatas">Candidatas</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#doctor">El cirujano</a>
+      <a href="#preguntas">Preguntas</a>
+      <a href="blog.html">Blog</a>
+      <a class="btn" href="https://wa.me/56944575535?text=Hola%2C%20quiero%20saber%20si%20soy%20candidata%20a%20la%20abdominoplastia%20con%20Bono%20PAD." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-texto">
+        <span class="etiqueta sube" style="--d:.05s">Guatita de delantal · Bono PAD Fonasa</span>
+        <hr class="regla regla-anim">
+        <h1>
+          <span class="sube" style="--d:.18s;display:block">Abdominoplastia con Bono PAD,</span>
+          <span class="sube" style="--d:.3s;display:block">con un valor fijo y conocido</span>
+        </h1>
+        <p class="intro sube" style="--d:.44s">
+          El Pago Asociado a Diagnóstico (PAD) de Fonasa permite operar la
+          «guatita de delantal» con un copago único que se conoce antes de la
+          cirugía, sin cuentas sorpresa. La evaluación y la cirugía las realiza el
+          Dr. Joaquín Ramírez, cirujano plástico, en Santiago de Chile.
+        </p>
+        <div class="acciones sube" style="--d:.58s">
+          <a class="btn" href="https://wa.me/56944575535?text=Hola%2C%20quiero%20saber%20si%20soy%20candidata%20a%20la%20abdominoplastia%20con%20Bono%20PAD." target="_blank" rel="noopener noreferrer">Conversemos por WhatsApp</a>
+          <a class="enlace" href="tel:+56944575535">Llamar al +56 9 4457 5535</a>
+        </div>
+      </div>
+      <div class="figura" aria-hidden="true">
+        <svg viewBox="0 0 560 720" xmlns="http://www.w3.org/2000/svg" role="presentation">
+          <path class="trazo" d="M176 44 C158 112,170 178,198 246 C216 290,176 330,152 416 C136 486,150 580,184 678"/>
+          <path class="trazo" d="M396 88 C412 150,400 204,376 258 C358 300,400 342,424 424 C440 492,428 588,398 672"/>
+          <path class="trazo fino" d="M288 400 C286 408,286 416,288 424"/>
+          <path class="trazo oro" d="M196 568 C248 604,336 604,388 566"/>
+        </svg>
+      </div>
+      <div class="dato sube" style="--d:.72s">
+        <span><b>Código PAD</b> 2505950</span>
+        <span><b>Para afiliadas a Fonasa</b> tramos B, C y D</span>
+        <span><b>Atención en</b> Las Condes, Santiago</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Qué es ── -->
+  <section id="que-es" class="tick">
+    <span class="folio" aria-hidden="true">01</span>
+    <div class="wrap">
+      <span class="etiqueta rev">La cirugía</span>
+      <hr class="regla rev">
+      <h2 class="rev">Qué es la abdominoplastia por PAD</h2>
+      <p class="rev" style="margin:1.8rem 0 3rem;color:var(--grey)">
+        La abdominoplastia retira el exceso de piel que cuelga sobre el pubis
+        —la llamada «guatita de delantal»— y repara la separación de los
+        músculos abdominales (diástasis), frecuente después de los embarazos o
+        de una baja de peso importante. La incisión es baja y la cicatriz queda
+        oculta bajo la ropa interior.
+      </p>
+      <ul class="lista tres rev">
+        <li>
+          <h3>Qué corrige</h3>
+          <p>La piel flácida y descolgada del abdomen y la diástasis de los
+          músculos rectos. Es cirugía de la pared abdominal, no un tratamiento
+          para bajar de peso.</p>
+        </li>
+        <li>
+          <h3>Qué cubre el bono</h3>
+          <p>Los honorarios del cirujano y del anestesista, el pabellón y la
+          hospitalización, en un solo valor conocido de antemano.</p>
+        </li>
+        <li>
+          <h3>Qué no incluye</h3>
+          <p>El PAD cubre exclusivamente la abdominoplastia tradicional. No
+          incluye liposucción ni procedimientos complementarios de definición
+          corporal.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── El bono en cifras ── -->
+  <section id="bono" class="hero-fondo tick" style="background:var(--cream);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)">
+    <span class="folio" aria-hidden="true">02</span>
+    <div class="hilo" aria-hidden="true">
+      <svg viewBox="0 0 1600 520" style="left:-120px;bottom:-60px" xmlns="http://www.w3.org/2000/svg">
+        <path style="stroke:var(--sage);opacity:.32" d="M-40 420 C260 300,520 470,820 330 C1080 210,1330 290,1660 130"/>
+        <path style="stroke:var(--sage);opacity:.18" d="M-40 464 C260 344,520 514,820 374 C1080 254,1330 334,1660 174"/>
+      </svg>
+    </div>
+    <div class="wrap">
+      <span class="etiqueta rev">Valores referenciales</span>
+      <hr class="regla rev">
+      <h2 class="rev">El bono PAD en cifras</h2>
+      <p class="rev" style="margin:1.8rem 0 3rem;color:var(--grey)">
+        El valor del PAD lo fija Fonasa y es el mismo en cualquier prestador en
+        convenio. La mitad la cubre Fonasa; el copago restante puede financiarse
+        en gran parte con el préstamo médico de Fonasa.
+      </p>
+      <div class="lista dos rev">
+        <div class="cifra">
+          <span class="que">Valor total del procedimiento</span>
+          <span class="numero">$3.583.580</span>
+          <p>Honorarios, pabellón y hospitalización incluidos.</p>
+        </div>
+        <div class="cifra">
+          <span class="que">Copago de la paciente</span>
+          <span class="numero">$1.791.790</span>
+          <p>Lo que corresponde pagar con el bono PAD.</p>
+        </div>
+        <div class="cifra">
+          <span class="que">Préstamo médico Fonasa</span>
+          <span class="numero">hasta $1.523.020</span>
+          <p>Hasta el 85% del copago, pagadero en cuotas a Fonasa.</p>
+        </div>
+        <div class="cifra">
+          <span class="que">Para el día de la cirugía</span>
+          <span class="numero">desde $268.769</span>
+          <p>El mínimo a pagar al comprar el bono si se usa el préstamo completo.</p>
+        </div>
+      </div>
+      <p class="nota rev">
+        Valores referenciales del arancel PAD de Fonasa (código 2505950),
+        sujetos a actualización por Fonasa. El acceso al préstamo médico y su
+        monto dependen de la evaluación que hace Fonasa en cada caso.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── Candidatas ── -->
+  <section id="candidatas" class="tick">
+    <span class="folio" aria-hidden="true">03</span>
+    <div class="wrap criterios">
+      <span class="etiqueta rev">Requisitos</span>
+      <hr class="regla rev">
+      <h2 class="rev">¿Eres candidata al PAD?</h2>
+      <p class="rev" style="margin:1.8rem 0 3rem;color:var(--grey)">
+        El PAD tiene criterios definidos. Cumplirlos permite acceder al bono;
+        la indicación final siempre la da la evaluación médica presencial.
+      </p>
+      <div class="lista dos rev">
+        <div>
+          <h3>Criterios para acceder</h3>
+          <ul>
+            <li>Afiliada a Fonasa, tramos B, C o D</li>
+            <li>Hasta 65 años</li>
+            <li>IMC menor a 25–27, según evaluación caso a caso</li>
+            <li>Pliegue abdominal que cuelga al menos 5 cm bajo el pliegue inguinal</li>
+            <li>Enfermedades crónicas compensadas</li>
+            <li>Sin fumar durante al menos 4 meses</li>
+          </ul>
+        </div>
+        <div class="no">
+          <h3>No es posible operar con</h3>
+          <ul>
+            <li>Embarazo, o posparto menor de 6 meses con lactancia activa</li>
+            <li>IMC sobre 30</li>
+            <li>Enfermedad oncológica o dermatológica activa en la zona</li>
+            <li>Patología psiquiátrica descompensada</li>
+            <li>Tabaquismo activo — se considera fumadora desde 3 cigarrillos a la semana</li>
+          </ul>
+        </div>
+      </div>
+      <div class="imc rev" id="imc">
+        <div>
+          <h3>Calcula tu IMC</h3>
+          <p class="imc-intro">
+            El índice de masa corporal es el primer filtro del PAD. Ingresa tu
+            peso y tu estatura:
+          </p>
+          <div class="campos">
+            <div>
+              <label for="imc-peso">Peso</label>
+              <div class="campo">
+                <input id="imc-peso" type="text" inputmode="decimal" placeholder="68" autocomplete="off">
+                <span class="unidad">kg</span>
+              </div>
+            </div>
+            <div>
+              <label for="imc-est">Estatura</label>
+              <div class="campo">
+                <input id="imc-est" type="text" inputmode="decimal" placeholder="1,60" autocomplete="off">
+                <span class="unidad">m</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="imc-res">
+          <span class="que">Tu IMC</span>
+          <span id="imc-valor">—</span>
+          <p id="imc-lectura">Completa los dos campos y te decimos cómo se ve frente al criterio del PAD.</p>
+          <a class="btn" id="imc-wsp" href="https://wa.me/56944575535" target="_blank" rel="noopener noreferrer" hidden>Conversemos tu caso</a>
+          <p class="imc-ref">Valor referencial: la evaluación presencial lo confirma.</p>
+        </div>
+      </div>
+      <p class="nota rev" style="margin-top:2.6rem">
+        ¿Dudas con algún criterio? Es lo primero que revisamos por
+        <a href="https://wa.me/56944575535?text=Hola%2C%20quiero%20saber%20si%20cumplo%20los%20criterios%20del%20Bono%20PAD." target="_blank" rel="noopener noreferrer">WhatsApp</a>,
+        antes de que vengas a la consulta.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── Proceso ── -->
+  <section id="proceso" class="alterna tick" style="background:var(--cream);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)">
+    <span class="folio" aria-hidden="true">04</span>
+    <div class="wrap">
+      <span class="etiqueta rev">Paso a paso</span>
+      <hr class="regla rev">
+      <h2 class="rev">Cómo es el proceso</h2>
+      <div class="lista dos rev" style="margin-top:3rem">
+        <div class="paso">
+          <span class="n">01</span>
+          <h3>Verificación de criterios</h3>
+          <p>Revisamos juntas los requisitos básicos —edad, IMC, tramo de
+          Fonasa, tabaco— por WhatsApp, para no hacerte perder una consulta si
+          el PAD no aplica.</p>
+        </div>
+        <div class="paso">
+          <span class="n">02</span>
+          <h3>Primera consulta</h3>
+          <p>Con un miembro del equipo: peso, medidas, datos clínicos y
+          fotografías preoperatorias para evaluar tu caso.</p>
+        </div>
+        <div class="paso">
+          <span class="n">03</span>
+          <h3>Evaluación con el Dr. Ramírez</h3>
+          <p>Conversación sobre la cirugía, sus alcances y límites, y
+          resolución de todas tus dudas antes de decidir.</p>
+        </div>
+        <div class="paso">
+          <span class="n">04</span>
+          <h3>Bono, cirugía y controles</h3>
+          <p>El equipo te acompaña en la compra del bono PAD y coordina la
+          fecha. Después de operarte: drenajes por 7 a 12 días y reposo laboral
+          de al menos 2 semanas, según tu actividad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── El cirujano ── -->
+  <section id="doctor" class="tick">
+    <span class="folio" aria-hidden="true">05</span>
+    <div class="wrap">
+      <span class="etiqueta rev">El cirujano responsable</span>
+      <hr class="regla rev">
+      <a class="doctor-card rev" href="https://www.drjoaquinramirez.cl" target="_blank" rel="noopener noreferrer" style="margin-top:1rem">
+        <div>
+          <img src="retrato-joaquin-ramirez.jpg" alt="Retrato del Dr. Joaquín Ramírez Sneberger">
+        </div>
+        <div class="texto">
+          <h2>Dr. Joaquín Ramírez Sneberger</h2>
+          <p class="cita">«La seguridad y la calidad de la atención son mi foco.»</p>
+          <p>
+            Cirujano plástico <b style="font-weight:500">certificado por CONACEM
+            en Cirugía Plástica y Reparadora</b>. Médico de la Universidad de
+            los Andes, con residencia de cirugía general en el Hospital Militar
+            de Santiago y tres años de formación en el Instituto Ivo Pitanguy
+            de Río de Janeiro, referente mundial de la especialidad. Se dedica
+            al contorno corporal y opera en Santiago de Chile, con evaluación
+            en Leblon Plastic Surgery, Las Condes. Atiende en español, inglés y
+            portugués.
+          </p>
+          <ul class="membresias">
+            <li>Sociedad Chilena de Cirugía Plástica</li>
+            <li>Ex alumnos del Instituto Ivo Pitanguy — AEXPI</li>
+            <li>International Society of Aesthetic Plastic Surgery — ISAPS</li>
+          </ul>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── Preguntas ── -->
+  <section id="preguntas" style="padding-top:0">
+    <div class="wrap">
+      <span class="etiqueta rev">Preguntas frecuentes</span>
+      <hr class="regla rev">
+      <div class="faq rev">
+        <details>
+          <summary>¿Qué es la «guatita de delantal»?</summary>
+          <p class="resp">Es el pliegue de piel y tejido que cae sobre el pubis
+          como un delantal, habitualmente después de embarazos o de una baja de
+          peso importante. Además de lo estético, puede producir rozaduras,
+          dermatitis e incomodidad para vestirse y moverse.</p>
+        </details>
+        <details>
+          <summary>¿El bono PAD incluye liposucción?</summary>
+          <p class="resp">No. El PAD cubre exclusivamente la abdominoplastia
+          tradicional: retiro de piel y reparación muscular. No incluye
+          liposucción ni tecnologías complementarias de definición corporal. Si
+          tu caso requiere manejo de grasa localizada, se conversa aparte en la
+          evaluación.</p>
+        </details>
+        <details>
+          <summary>¿Cómo sé si cumplo los requisitos?</summary>
+          <p class="resp">Los criterios centrales son: Fonasa B, C o D, hasta
+          65 años, IMC menor a 25–27, pliegue que cuelga al menos 5 cm y no
+          fumar por 4 meses. La forma más rápida de salir de la duda es
+          escribirnos por WhatsApp; la confirmación definitiva la da la
+          evaluación presencial.</p>
+        </details>
+        <details>
+          <summary>¿Cómo es la recuperación?</summary>
+          <p class="resp">La cirugía contempla hospitalización, drenajes que se
+          retiran entre 7 y 12 días después, y reposo laboral de al menos 2
+          semanas, que varía según el tipo de trabajo. Es un procedimiento
+          quirúrgico mayor: seguir las indicaciones médicas al pie de la letra
+          es parte del tratamiento.</p>
+        </details>
+        <details>
+          <summary>¿Los resultados son definitivos?</summary>
+          <p class="resp">La cirugía corrige la piel sobrante y la musculatura,
+          pero el resultado depende también de lo que venga después: subidas
+          importantes de peso o nuevos embarazos pueden modificarlo. Mantener
+          hábitos saludables ayuda a conservarlo en el tiempo.</p>
+        </details>
+        <details>
+          <summary>¿Qué pasa si no soy Fonasa B, C o D?</summary>
+          <p class="resp">El bono PAD es un beneficio exclusivo de esos tramos.
+          Si estás en otro tramo o en Isapre, igual podemos evaluar tu caso y
+          orientarte sobre las alternativas; escríbenos por WhatsApp.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contacto ── -->
+  <section id="contacto" class="contacto tick">
+    <div class="hilo" aria-hidden="true">
+      <svg viewBox="0 0 1600 520" style="right:-260px;top:-30px" xmlns="http://www.w3.org/2000/svg">
+        <path style="stroke:var(--gold);opacity:.4" d="M-40 130 C300 290,560 210,860 350 C1120 470,1360 390,1660 460"/>
+        <path style="stroke:var(--gold);opacity:.22" d="M-40 174 C300 334,560 254,860 394 C1120 514,1360 434,1660 504"/>
+      </svg>
+    </div>
+    <div class="wrap">
+      <span class="etiqueta rev">Contacto</span>
+      <hr class="regla rev">
+      <h2 class="rev">El primer paso es una conversación</h2>
+      <p class="rev" style="margin:1.8rem 0 0;color:var(--grey)">
+        Escríbenos y revisamos juntas si el bono PAD es para ti.
+      </p>
+      <div class="acciones rev" style="margin-top:2.4rem">
+        <a class="btn" href="https://wa.me/56944575535?text=Hola%2C%20quiero%20saber%20si%20soy%20candidata%20a%20la%20abdominoplastia%20con%20Bono%20PAD." target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a>
+      </div>
+      <div class="fila rev">
+        <div>
+          <span class="que">Teléfono y WhatsApp</span>
+          <p><a href="tel:+56944575535">+56 9 4457 5535</a></p>
+        </div>
+        <div>
+          <span class="que">Correo</span>
+          <p><a href="mailto:contacto@abdominoplastiapad.com">contacto@abdominoplastiapad.com</a></p>
+        </div>
+        <div>
+          <span class="que">Dirección</span>
+          <p>San Sebastián 2839, oficina 211<br>Las Condes, Santiago ·
+          <a href="https://maps.google.com/?q=San+Sebasti%C3%A1n+2839+oficina+211+Las+Condes" target="_blank" rel="noopener noreferrer">Cómo llegar</a></p>
+        </div>
+        <div>
+          <span class="que">Consulta</span>
+          <p>Leblon Plastic Surgery<br>Barrio El Golf</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="legal">
+      <b>Profesional responsable:</b> Dr. Joaquín Ramírez Sneberger, cirujano
+      plástico certificado por CONACEM en Cirugía Plástica y Reparadora.
+      Universidad de los Andes · Instituto Ivo Pitanguy, Río de Janeiro.
+    </p>
+    <p class="legal">
+      La información de este sitio es referencial y no reemplaza la evaluación
+      médica presencial. Los valores del bono PAD corresponden al arancel
+      vigente de Fonasa y pueden variar. Toda cirugía tiene riesgos, que se
+      explican en detalle durante la consulta y en el proceso de consentimiento
+      informado.
+    </p>
+    <div class="redes">
+      <a href="blog.html">Blog</a>
+      <a href="https://wa.me/56944575535" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <a href="https://www.instagram.com/abdominoplastiapad" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.tiktok.com/@abdominoplastiapad" target="_blank" rel="noopener noreferrer">TikTok</a>
+      <a href="https://web.facebook.com/profile.php?id=61574757542211" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="https://open.spotify.com/show/3WAZH5wDXqHfwVPTGVhRtO" target="_blank" rel="noopener noreferrer">Podcast</a>
+      <a href="https://www.drjoaquinramirez.cl" target="_blank" rel="noopener noreferrer">drjoaquinramirez.cl</a>
+    </div>
+    <p class="legal" style="margin-top:2.2rem">© 2026 Dr. Joaquín Ramírez Sneberger · abdominoplastiapad.com</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // El contorno se dibuja solo al cargar la página
+  var trazos = document.querySelectorAll('.figura path');
+  if (trazos.length && !matchMedia('(prefers-reduced-motion:reduce)').matches){
+    trazos.forEach(function(p,i){
+      var L = p.getTotalLength();
+      p.style.strokeDasharray = L;
+      p.style.strokeDashoffset = L;
+      p.getBoundingClientRect();
+      p.style.transition = 'stroke-dashoffset 1.7s cubic-bezier(.4,0,.2,1) ' + (.4 + i*.38) + 's';
+      p.style.strokeDashoffset = '0';
+    });
+  }
+  if (matchMedia('(prefers-reduced-motion:reduce)').matches){
+    document.querySelectorAll('.rev').forEach(function(el){el.classList.add('visible')});
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  },{threshold:.12});
+  document.querySelectorAll('.rev').forEach(function(el){io.observe(el)});
+})();
+
+// Paralaje sutil de los hilos y folios del fondo
+(function(){
+  if (matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  var capas = [].slice.call(document.querySelectorAll('.hilo svg, .folio'));
+  if (!capas.length) return;
+  var pedido = false;
+  function pinta(){
+    pedido = false;
+    var vc = innerHeight/2;
+    capas.forEach(function(el){
+      var r = el.parentElement.getBoundingClientRect();
+      var d = r.top + r.height/2 - vc;
+      var f = el.classList.contains('folio') ? -0.04 : 0.07;
+      var t = Math.max(-52, Math.min(52, d*f));
+      el.style.transform = 'translateY(' + t.toFixed(1) + 'px)';
+    });
+  }
+  addEventListener('scroll', function(){
+    if (!pedido){ pedido = true; requestAnimationFrame(pinta); }
+  }, {passive:true});
+  pinta();
+})();
+
+// Calculadora de IMC
+(function(){
+  var peso = document.getElementById('imc-peso');
+  var est = document.getElementById('imc-est');
+  var valor = document.getElementById('imc-valor');
+  var lectura = document.getElementById('imc-lectura');
+  var wsp = document.getElementById('imc-wsp');
+
+  function calcular(){
+    var p = parseFloat((peso.value||'').replace(',','.'));
+    var e = parseFloat((est.value||'').replace(',','.'));
+    if (e > 3) e = e/100;               // aceptan la estatura en cm
+    var imc = p/(e*e);
+    if (!p || !e || !isFinite(imc) || imc < 10 || imc > 80){
+      valor.textContent = '—';
+      valor.style.color = '';
+      lectura.textContent = 'Completa los dos campos y te decimos cómo se ve frente al criterio del PAD.';
+      wsp.hidden = true;
+      return;
+    }
+    var txt = imc.toFixed(1).replace('.',',');
+    valor.textContent = txt;
+    if (imc < 25){
+      valor.style.color = 'var(--sage-deep)';
+      lectura.textContent = 'Dentro del criterio del PAD (IMC menor a 25–27). El siguiente paso es revisar el resto de los requisitos.';
+    } else if (imc <= 27){
+      valor.style.color = 'var(--sage-deep)';
+      lectura.textContent = 'En el rango que el PAD evalúa caso a caso (25–27). Vale la pena conversarlo.';
+    } else if (imc <= 30){
+      valor.style.color = 'var(--gold-deep)';
+      lectura.textContent = 'Sobre el criterio del PAD (25–27). Igual escríbenos: te orientamos sobre el camino para llegar.';
+    } else {
+      valor.style.color = 'var(--gold-deep)';
+      lectura.textContent = 'Sobre 30, el límite para operar con seguridad. Te podemos orientar para bajarlo y reevaluar.';
+    }
+    wsp.hidden = false;
+    wsp.href = 'https://wa.me/56944575535?text=' + encodeURIComponent(
+      'Hola, mi IMC es ' + txt + ' y quiero saber si puedo acceder a la abdominoplastia con Bono PAD.'
+    );
+  }
+  if (peso && est){
+    peso.addEventListener('input', calcular);
+    est.addEventListener('input', calcular);
+  }
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Physician",
+  "name":"Dr. Joaquín Ramírez Sneberger",
+  "medicalSpecialty":"PlasticSurgery",
+  "description":"Cirujano plástico dedicado al contorno corporal. Abdominoplastia con Bono PAD Fonasa en Santiago de Chile.",
+  "telephone":"+56944575535",
+  "email":"contacto@abdominoplastiapad.com",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"San Sebastián 2839, oficina 211",
+    "addressLocality":"Las Condes",
+    "addressRegion":"Región Metropolitana",
+    "addressCountry":"CL"
+  },
+  "url":"https://www.abdominoplastiapad.com"
+}
+</script>
+
+</body>
+</html>

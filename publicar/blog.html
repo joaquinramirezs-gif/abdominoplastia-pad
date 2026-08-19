@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog — Abdominoplastia PAD · Dr. Joaquín Ramírez</title>
+<meta name="description" content="Artículos del Dr. Joaquín Ramírez sobre la abdominoplastia con Bono PAD Fonasa: requisitos, recuperación, plicaturas abdominales y preguntas frecuentes sobre la guatita de delantal.">
+<link rel="icon" type="image/png" href="JR-monograma-transparente.png">
+<style>
+:root{
+  --paper:#FFFFFF;
+  --cream:#FAF8F4;
+  --ink:#2E3033;
+  --grey:#58595B;
+  --sage:#86BE9C;
+  --sage-deep:#3F7256;
+  --sage-mist:#EDF5F0;
+  --gold:#CBB984;
+  --gold-deep:#8A7638;
+  --linea:#E7E2D8;
+  --sans:'Helvetica Neue',Helvetica,'Segoe UI',system-ui,-apple-system,Arial,sans-serif;
+  --ancho:1180px;
+  --gutter:clamp(1.5rem,5vw,4rem);
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#232825;
+    --cream:#1B1F1D;
+    --ink:#F0EDE6;
+    --grey:#A9AFA9;
+    --sage-deep:#9FD2B4;
+    --sage-mist:#202A24;
+    --gold:#DCC896;
+    --gold-deep:#E3D3A8;
+    --linea:#3A403C;
+  }
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  font-family:var(--sans);font-weight:400;color:var(--ink);background:var(--paper);
+  font-size:clamp(1rem,.97rem + .15vw,1.075rem);line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--ancho);margin:0 auto;padding:0 var(--gutter)}
+section{padding:clamp(5rem,6vw + 3rem,8.5rem) 0}
+h1,h2{font-weight:200;line-height:1.15;letter-spacing:.02em}
+h1{font-size:clamp(2.1rem,1.4rem + 3vw,3.6rem)}
+h2{font-size:clamp(1.7rem,1.2rem + 2vw,2.7rem)}
+h3{font-weight:300;font-size:clamp(1.15rem,1.05rem + .4vw,1.4rem);letter-spacing:.01em;line-height:1.35}
+p{max-width:62ch}
+a{color:var(--sage-deep)}
+.etiqueta{
+  display:block;font-size:.7rem;font-weight:500;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--sage-deep);margin-bottom:1.4rem;
+}
+.regla{width:56px;height:1px;background:var(--gold);border:0;margin:0 0 2rem}
+.btn{
+  display:inline-block;padding:.95rem 2.2rem;font-size:.76rem;font-weight:400;
+  text-transform:uppercase;letter-spacing:.2em;text-decoration:none;
+  border:1px solid var(--gold);color:var(--gold-deep);background:none;
+  transition:background .4s ease,color .4s ease;
+}
+.btn:hover,.btn:focus-visible{background:var(--gold);color:#2E3033}
+.enlace{
+  font-size:.76rem;text-transform:uppercase;letter-spacing:.2em;
+  color:var(--ink);text-decoration:none;border-bottom:1px solid var(--gold);
+  padding-bottom:.35rem;
+}
+.enlace:hover{color:var(--gold-deep)}
+
+/* ── Barra ── */
+header{
+  position:sticky;top:0;z-index:10;background:var(--paper);
+  border-bottom:1px solid var(--linea);
+}
+.barra{
+  max-width:var(--ancho);margin:0 auto;padding:.9rem var(--gutter);
+  display:flex;align-items:center;gap:2rem;
+}
+.marca{display:flex;align-items:center;gap:.9rem;text-decoration:none;color:var(--ink)}
+.marca img{height:34px;width:auto;display:block}
+.marca span{
+  font-size:.7rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;
+  line-height:1.5;white-space:nowrap;
+}
+.marca small{
+  display:block;font-size:.58rem;font-weight:400;letter-spacing:.24em;color:var(--grey);
+}
+nav{margin-left:auto;display:flex;align-items:center;gap:1.6rem}
+nav a{
+  font-size:.7rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--grey);text-decoration:none;white-space:nowrap;
+}
+nav a:hover{color:var(--sage-deep)}
+nav .actual{color:var(--sage-deep)}
+nav .btn{padding:.65rem 1.4rem;color:var(--gold-deep)}
+nav .btn:hover{color:#2E3033}
+@media (max-width:920px){nav a:not(.btn){display:none}}
+@media (max-width:600px){.marca span{display:none}}
+
+/* ── Fondo: folios, hilos y el filete del monograma ── */
+main section{position:relative}
+main section>.wrap{position:relative;z-index:1}
+.tick::before{
+  content:"";position:absolute;left:50%;top:-40px;width:1px;height:80px;
+  background:var(--gold);
+}
+.folio{
+  position:absolute;top:clamp(2rem,4vw,4rem);right:var(--gutter);z-index:0;
+  font-weight:200;font-size:clamp(5.5rem,4rem + 6vw,9.5rem);line-height:1;
+  color:var(--linea);letter-spacing:.02em;user-select:none;pointer-events:none;
+}
+.hilo{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}
+.hilo svg{position:absolute;width:1600px;height:auto;will-change:transform}
+.hilo path{fill:none;stroke-width:1.5;stroke-linecap:round}
+
+/* ── Portada del blog ── */
+.portada{background:var(--cream);border-bottom:1px solid var(--linea)}
+.portada p.intro{margin:1.8rem 0 0;color:var(--grey)}
+.indice{
+  margin-top:3rem;display:grid;gap:1px;background:var(--linea);
+  border:1px solid var(--linea);
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+@media (max-width:720px){.indice{grid-template-columns:1fr}}
+.indice a{
+  background:var(--paper);padding:2rem 1.8rem;text-decoration:none;color:var(--ink);
+  display:block;
+}
+.indice a:hover h3{color:var(--sage-deep)}
+.indice .meta{
+  display:block;font-size:.7rem;font-weight:500;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--gold-deep);margin-bottom:.9rem;
+}
+.indice h3{margin-bottom:.6rem;transition:color .3s ease}
+.indice p{font-size:.95rem;color:var(--grey)}
+
+/* ── Artículos ── */
+.post .cuerpo{margin-top:1rem}
+.post .cuerpo p{margin:0 0 1.4rem;color:var(--grey)}
+.post .cuerpo p.abre{color:var(--ink)}
+.post .cuerpo h3{color:var(--ink);margin:2.6rem 0 1rem}
+.post .cuerpo ul{list-style:none;margin:0 0 1.4rem;max-width:62ch}
+.post .cuerpo li{
+  padding:.75rem 0 .75rem 1.7rem;border-bottom:1px solid var(--linea);
+  font-size:.97rem;color:var(--grey);position:relative;
+}
+.post .cuerpo li::before{
+  content:"";position:absolute;left:0;top:1.45rem;width:5px;height:5px;
+  border-radius:50%;background:var(--sage);
+}
+.post .cuerpo li:last-child{border-bottom:none}
+.post .cuerpo b{font-weight:500;color:var(--ink)}
+.post .cierre{margin-top:2.6rem}
+.alterna{background:var(--cream);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+
+/* ── Pie ── */
+footer{border-top:1px solid var(--linea);padding:3.5rem 0 4rem;background:var(--paper)}
+footer .legal{font-size:.85rem;color:var(--grey);max-width:76ch}
+footer .legal + .legal{margin-top:1rem}
+footer .redes{margin-top:2.2rem;display:flex;flex-wrap:wrap;gap:2rem}
+footer .redes a{
+  font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--grey);text-decoration:none;border-bottom:1px solid var(--gold);
+  padding-bottom:.3rem;
+}
+footer .redes a:hover{color:var(--gold-deep)}
+
+/* ── Apariciones ── */
+.rev{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rev.visible{opacity:1;transform:none}
+@keyframes subir{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.sube{opacity:0;animation:subir .9s cubic-bezier(.22,.61,.36,1) forwards;animation-delay:var(--d,0s)}
+@media (prefers-reduced-motion:reduce){
+  .rev{opacity:1;transform:none;transition:none}
+  .sube{animation:none;opacity:1}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="barra">
+    <a class="marca" href="/">
+      <img src="JR-monograma-transparente.png" alt="Monograma JR">
+      <span>Abdominoplastia PAD
+        <small>Dr. Joaquín Ramírez · Cirujano Plástico</small>
+      </span>
+    </a>
+    <nav aria-label="Secciones">
+      <a href="/">Inicio</a>
+      <a href="/#bono">El bono</a>
+      <a href="/#candidatas">Candidatas</a>
+      <a class="actual" href="blog.html" aria-current="page">Blog</a>
+      <a href="/#contacto">Contacto</a>
+      <a class="btn" href="https://wa.me/56944575535?text=Hola%2C%20le%C3%AD%20el%20blog%20de%20la%20abdominoplastia%20PAD%20y%20quiero%20evaluar%20mi%20caso." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ── Portada ── -->
+  <section class="portada">
+    <div class="wrap">
+      <span class="etiqueta sube" style="--d:.05s">El blog</span>
+      <hr class="regla sube" style="--d:.15s">
+      <h1 class="sube" style="--d:.25s">Artículos sobre la abdominoplastia PAD</h1>
+      <p class="intro sube" style="--d:.4s">
+        Escritos por el Dr. Joaquín Ramírez para responder, con calma y sin
+        letra chica, las preguntas que más se repiten en la consulta.
+      </p>
+      <div class="indice sube" style="--d:.55s">
+        <a href="#requisitos">
+          <span class="meta">Abril 2026 · 2 min</span>
+          <h3>¿Quién puede operarse con el Bono PAD?</h3>
+          <p>Los requisitos médicos para la guatita de delantal, y qué hacer si
+          todavía no los cumples.</p>
+        </a>
+        <a href="#recuperacion">
+          <span class="meta">Abril 2026 · 2 min</span>
+          <h3>¿Cómo es la recuperación?</h3>
+          <p>Semana a semana: drenajes, faja, reposo y el regreso al ejercicio.</p>
+        </a>
+        <a href="#preguntas">
+          <span class="meta">Abril 2026 · 2 min</span>
+          <h3>Preguntas frecuentes sobre el PAD</h3>
+          <p>Valores, cobertura, requisitos y cómo agendar, todo en un solo
+          lugar.</p>
+        </a>
+        <a href="#plicaturas">
+          <span class="meta">Abril 2026 · 3 min</span>
+          <h3>Plicaturas abdominales</h3>
+          <p>Más allá de la diástasis de rectos: cómo se reconstruye la pared
+          muscular.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 01 · Requisitos ── -->
+  <section class="post tick" id="requisitos">
+    <span class="folio" aria-hidden="true">01</span>
+    <div class="wrap">
+      <span class="etiqueta rev">Abril 2026 · 2 min de lectura</span>
+      <hr class="regla rev">
+      <h2 class="rev">¿Quién puede operarse con el Bono PAD? Requisitos para la guatita de delantal</h2>
+      <div class="cuerpo rev">
+        <p class="abre">
+          No todas las personas que tienen una guatita de delantal son
+          candidatas para operarse con el Bono PAD de Fonasa. Existen criterios
+          médicos específicos que se deben cumplir para acceder a esta
+          modalidad de pago. Aquí te explicamos cuáles son y qué ocurre si no
+          los cumples todos.
+        </p>
+        <h3>¿Qué es la guatita de delantal?</h3>
+        <p>
+          La «guatita de delantal» es el término popular que se usa en Chile
+          para describir el pliegue abdominal que cuelga por sobre el pliegue
+          inguinal. Se forma después de embarazos, pérdida masiva de peso o
+          simplemente con los años. Además del aspecto estético, puede causar
+          molestias físicas como rozaduras, infección de la piel en el pliegue
+          y dificultad para moverse.
+        </p>
+        <h3>Criterios de inclusión: quiénes pueden operarse</h3>
+        <ul>
+          <li><b>IMC menor a 25.</b> En casos seleccionados se evalúa con IMC
+          hasta 27. El programa permite hasta IMC 30, pero como equipo no
+          realizamos la cirugía sobre ese rango por los pobres resultados que
+          se obtienen.</li>
+          <li>Pliegue abdominal que cuelgue al menos 5 cm por debajo del
+          pliegue inguinal.</li>
+          <li>Edad menor a 65 años.</li>
+          <li>Enfermedades crónicas compensadas (diabetes, hipertensión, etc.).</li>
+          <li><b>No fumar:</b> el tabaco debe haberse suspendido al menos 4
+          meses antes de la cirugía (se considera tabáquica desde 3 cigarrillos
+          por semana).</li>
+          <li>Ser afiliada a Fonasa, grupos B, C o D.</li>
+        </ul>
+        <h3>Criterios de exclusión: quiénes no pueden operarse por ahora</h3>
+        <ul>
+          <li>Embarazo activo, o posparto antes de 6 meses (con lactancia
+          detenida).</li>
+          <li>Enfermedad oncológica activa.</li>
+          <li>Enfermedad dermatológica activa en el área quirúrgica.</li>
+          <li>Enfermedad psiquiátrica descompensada.</li>
+          <li>IMC mayor a 30.</li>
+          <li>Tabaquismo activo en los últimos 120 días.</li>
+        </ul>
+        <h3>¿Y si no cumplo algún criterio?</h3>
+        <p>
+          Algunos criterios son modificables con tiempo y esfuerzo. Si tienes
+          un IMC elevado, bajar de peso antes de la cirugía puede hacerte
+          elegible. Si fumas, dejar el tabaco 4 meses antes abre la
+          posibilidad de operarte. Si terminaste el posparto hace poco, el
+          tiempo juega a tu favor. En estos casos, la consulta de evaluación es
+          el primer paso para trazar un plan personalizado.
+        </p>
+        <h3>¿Cómo saber si soy candidata?</h3>
+        <p>
+          La única manera de saberlo con certeza es una consulta de evaluación
+          con el equipo del Dr. Joaquín Ramírez. En la primera consulta se
+          toman tus medidas, peso y fotografías preoperatorias, y se evalúa tu
+          pliegue abdominal. Si cumples los criterios, el equipo coordina los
+          siguientes pasos para acceder al Bono PAD de Fonasa.
+        </p>
+      </div>
+      <div class="cierre rev">
+        <a class="btn" href="https://wa.me/56944575535?text=Hola%2C%20quiero%20saber%20si%20cumplo%20los%20requisitos%20del%20Bono%20PAD." target="_blank" rel="noopener noreferrer">Revisemos tus requisitos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 02 · Recuperación ── -->
+  <section class="post tick alterna" id="recuperacion">
+    <span class="folio" aria-hidden="true">02</span>
+    <div class="wrap">
+      <span class="etiqueta rev">Abril 2026 · 2 min de lectura</span>
+      <hr class="regla rev">
+      <h2 class="rev">¿Cómo es la recuperación después de una abdominoplastia PAD?</h2>
+      <div class="cuerpo rev">
+        <p class="abre">
+          Decidir operarse es una cosa; entender cómo va a ser la recuperación
+          es igual de importante. La abdominoplastia PAD —la operación de la
+          guatita de delantal— tiene un postoperatorio que requiere
+          planificación y cuidado. Esto es lo que puedes esperar, semana a
+          semana.
+        </p>
+        <h3>Primeras 24 a 48 horas: descanso total</h3>
+        <p>
+          Al despertar de la anestesia te encontrarás con una faja de
+          compresión abdominal y uno o dos drenajes quirúrgicos — tubos
+          pequeños que evitan la acumulación de líquido bajo la piel. La
+          hospitalización dura generalmente una noche. El dolor es manejable
+          con los analgésicos que se recetan al alta, y es normal sentir la
+          zona abdominal tensa, como si no pudieras pararte completamente
+          derecha.
+        </p>
+        <h3>Semanas 1 y 2: los drenajes y el reposo</h3>
+        <p>Las dos primeras semanas son las más delicadas. Los drenajes se
+        retiran generalmente entre el día 7 y el 14, cuando el débito de
+        líquido disminuye lo suficiente. Durante este período debes:</p>
+        <ul>
+          <li>Usar la faja de compresión abdominal las 24 horas del día.</li>
+          <li>Caminar en posición ligeramente encorvada hacia adelante, para no
+          tensionar la herida.</li>
+          <li>Evitar esfuerzos físicos, levantar peso y la actividad sexual.</li>
+          <li>Mantener reposo laboral: la mayoría de las pacientes necesita al
+          menos 3 semanas fuera del trabajo.</li>
+        </ul>
+        <h3>Semanas 3 y 4: reincorporación gradual</h3>
+        <p>
+          A partir de la tercera semana, la mayoría puede retomar actividades
+          livianas como trabajar en oficina o estudiar. La postura se va
+          normalizando y la sensación de tensión abdominal disminuye
+          progresivamente. La faja sigue siendo necesaria, generalmente hasta
+          las 8 a 12 semanas desde la cirugía.
+        </p>
+        <h3>Meses 2 y 3: los resultados se hacen visibles</h3>
+        <p>
+          A partir del segundo mes la hinchazón postoperatoria comienza a
+          resolverse y los resultados definitivos empiezan a apreciarse. La
+          cicatriz, que queda en la parte baja del abdomen —oculta bajo la ropa
+          interior—, se va aclarando con el tiempo. A los 3 meses la mayoría
+          puede retomar el ejercicio de forma progresiva, comenzando con
+          caminatas y aumentando gradualmente la intensidad.
+        </p>
+        <h3>Cuidados importantes durante toda la recuperación</h3>
+        <ul>
+          <li><b>No fumar:</b> el tabaco dificulta la cicatrización y aumenta
+          el riesgo de complicaciones.</li>
+          <li><b>Hidratación y alimentación:</b> una dieta equilibrada favorece
+          la cicatrización y previene el estreñimiento.</li>
+          <li><b>Protección solar de la cicatriz:</b> el sol puede oscurecerla
+          durante el primer año; usa protector solar o cubre la zona.</li>
+          <li><b>Controles médicos:</b> asiste a todos los controles
+          postoperatorios programados.</li>
+        </ul>
+        <p>
+          Si tienes dudas sobre si estás lista para operarte o cómo organizar
+          tu recuperación, agenda una consulta de evaluación: te explicamos
+          todo el proceso en detalle antes de tomar cualquier decisión.
+        </p>
+      </div>
+      <div class="cierre rev">
+        <a class="btn" href="https://wa.me/56944575535?text=Hola%2C%20quiero%20entender%20c%C3%B3mo%20ser%C3%ADa%20mi%20recuperaci%C3%B3n%20tras%20la%20abdominoplastia%20PAD." target="_blank" rel="noopener noreferrer">Conversemos tu caso</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 03 · Preguntas frecuentes ── -->
+  <section class="post tick" id="preguntas">
+    <span class="folio" aria-hidden="true">03</span>
+    <div class="wrap">
+      <span class="etiqueta rev">Abril 2026 · 2 min de lectura</span>
+      <hr class="regla rev">
+      <h2 class="rev">Preguntas frecuentes sobre la abdominoplastia PAD y la guatita de delantal</h2>
+      <div class="cuerpo rev">
+        <p class="abre">
+          Estas son las preguntas que más nos hacen las pacientes interesadas
+          en operarse la guatita de delantal con el Bono PAD de Fonasa. Las
+          respondemos todas aquí, para que llegues a tu primera consulta con la
+          información completa.
+        </p>
+        <h3>¿Qué es la guatita de delantal?</h3>
+        <p>
+          Es el nombre popular para el pliegue de piel abdominal que cuelga al
+          menos 5 centímetros por debajo del pliegue inguinal. Se forma después
+          de embarazos, pérdida importante de peso o con los años. Médicamente
+          se trata con una abdominoplastia: el procedimiento que elimina el
+          exceso de piel y repara la musculatura abdominal.
+        </p>
+        <h3>¿Qué es el Bono PAD de Fonasa?</h3>
+        <p>
+          El Bono PAD (Pago Asociado a Diagnóstico) es un beneficio de Fonasa
+          que permite acceder a determinadas cirugías con un costo fijo y
+          transparente, conocido de antemano. Cubre honorarios del cirujano,
+          anestesista, pabellón y hospitalización. Es exclusivo para afiliadas
+          a Fonasa de los grupos B, C y D.
+        </p>
+        <h3>¿Cuánto cuesta la abdominoplastia con el Bono PAD?</h3>
+        <p>
+          El valor total del procedimiento (código 2505950) es de $3.583.580.
+          El copago de la paciente es de $1.791.790. Fonasa ofrece un préstamo
+          de hasta el 85% del copago ($1.523.020), por lo que el monto que
+          necesitas tener disponible el día de la cirugía puede ser de solo
+          $268.769.
+        </p>
+        <h3>¿Quién puede operarse con el Bono PAD?</h3>
+        <p>
+          Los requisitos principales: IMC menor a 27, pliegue abdominal que
+          cuelgue al menos 5 cm bajo el pliegue inguinal, menos de 65 años, no
+          fumar en los últimos 4 meses y estar afiliada a Fonasa. Existen
+          criterios de exclusión que se evalúan en la consulta.
+        </p>
+        <h3>¿Cuánto tiempo dura la recuperación?</h3>
+        <p>
+          Los drenajes se retiran entre el día 7 y 12. El reposo laboral es de
+          al menos 2 semanas. La faja de compresión se usa por 6 semanas. La
+          mayoría puede retomar el ejercicio a los 3 meses, y los resultados
+          definitivos se aprecian a partir del segundo o tercer mes.
+        </p>
+        <h3>¿La abdominoplastia PAD incluye liposucción?</h3>
+        <p>
+          No. El Bono PAD cubre únicamente la abdominoplastia tradicional: la
+          corrección del pliegue abdominal y la reparación de la diástasis
+          muscular. La liposucción y otros procedimientos complementarios no
+          están incluidos en este bono.
+        </p>
+        <h3>¿Cómo agendo una evaluación?</h3>
+        <p>
+          Escríbenos por WhatsApp al +56 9 4457 5535 o por correo a
+          contacto@abdominoplastiapad.com. ¿Tienes alguna pregunta que no esté
+          aquí? Te la respondemos a la brevedad por la misma vía.
+        </p>
+      </div>
+      <div class="cierre rev">
+        <a class="btn" href="https://wa.me/56944575535?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20la%20abdominoplastia%20con%20Bono%20PAD." target="_blank" rel="noopener noreferrer">Haz tu pregunta</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 04 · Plicaturas ── -->
+  <section class="post tick alterna" id="plicaturas">
+    <span class="folio" aria-hidden="true">04</span>
+    <div class="wrap">
+      <span class="etiqueta rev">Abril 2026 · 3 min de lectura</span>
+      <hr class="regla rev">
+      <h2 class="rev">Plicaturas abdominales: más allá de la corrección de la diástasis de rectos</h2>
+      <div class="cuerpo rev">
+        <p class="abre">
+          La abdominoplastia es mucho más que una intervención para eliminar
+          exceso de piel y grasa. Uno de sus componentes técnicos clave es la
+          reconstrucción de la pared muscular mediante plicaturas: técnicas
+          quirúrgicas que restauran tensión, función y forma abdominal.
+        </p>
+        <h3>¿Qué es la diástasis de rectos y cómo se corrige?</h3>
+        <p>
+          La diástasis de rectos abdominales es la separación de los músculos
+          rectos a lo largo de la línea media, llamada línea alba. Es frecuente
+          en mujeres después del parto, aunque también aparece en hombres o
+          tras cambios significativos de peso.
+        </p>
+        <p>
+          La plicatura de rectos es la técnica estándar para corregirla:
+          consiste en suturar los bordes internos de ambos músculos,
+          aproximándolos hacia la línea media y reforzando la línea alba. El
+          resultado es una pared más firme, un contorno definido y,
+          frecuentemente, una reducción del perímetro de cintura.
+        </p>
+        <h3>Cuando la separación muscular no es el único problema</h3>
+        <p>
+          En algunas pacientes, la debilidad de la pared abdominal supera la
+          simple separación de rectos: existe flacidez generalizada de la
+          fascia —la capa de tejido fibroso que recubre los músculos— que no se
+          resuelve solo con la plicatura clásica. Ocurre tras múltiples
+          embarazos, pérdidas de peso importantes o por debilidad
+          constitucional del tejido conectivo. En esos casos, corregir
+          únicamente la diástasis es insuficiente para lograr una pared
+          verdaderamente firme y funcional.
+        </p>
+        <h3>Técnicas adicionales de plicatura</h3>
+        <ul>
+          <li><b>Plicatura de fascia anterior:</b> refuerza directamente la
+          vaina anterior del recto, dando mayor sostén cuando la fascia está
+          debilitada o elongada.</li>
+          <li><b>Plicatura lateral u oblicua:</b> cuando la debilidad
+          compromete los flancos, se refuerzan los músculos oblicuos con
+          suturas adicionales en la zona lateral — útil para una cintura más
+          definida.</li>
+          <li><b>Plicatura en múltiples planos:</b> en laxitud severa se sutura
+          en más de un plano tisular, reforzando fascia posterior y anterior
+          para un sostén más sólido y duradero.</li>
+          <li><b>Plicatura alta o supraumbilical extendida:</b> cuando la
+          debilidad se extiende sobre el ombligo, la plicatura se prolonga en
+          altura para abarcar toda la pared anterior, desde el pubis hasta el
+          apéndice xifoides.</li>
+        </ul>
+        <h3>¿Cómo se determina la técnica adecuada?</h3>
+        <p>
+          Con una evaluación clínica detallada y personalizada. En la consulta
+          preoperatoria se evalúa el grado de separación muscular, la calidad y
+          extensión de la flacidez fascial, la distribución de la debilidad a
+          lo largo de la pared y los objetivos funcionales y estéticos de la
+          paciente. En algunos casos, estudios complementarios como la
+          ecografía de pared abdominal ayudan a objetivar el grado de diástasis
+          antes de planificar la cirugía.
+        </p>
+        <h3>La importancia de una planificación precisa</h3>
+        <p>
+          Abordar adecuadamente la pared abdominal es fundamental para obtener
+          resultados duraderos y naturales. Una plicatura bien ejecutada mejora
+          el contorno externo, fortalece la pared muscular, mejora la postura y
+          puede aliviar molestias como el dolor lumbar asociado a debilidad
+          abdominal. Por eso la evaluación debe hacerla un cirujano plástico
+          certificado, con experiencia en cirugía de contorno corporal.
+        </p>
+        <h3>Conclusión</h3>
+        <p>
+          Las plicaturas abdominales son un conjunto de herramientas que el
+          cirujano adapta a la realidad anatómica de cada paciente: desde la
+          plicatura de rectos clásica hasta técnicas más complejas para
+          flacidez generalizada. El objetivo es siempre el mismo — devolver al
+          abdomen su firmeza, su función y su forma.
+        </p>
+      </div>
+      <div class="cierre rev">
+        <a class="btn" href="https://wa.me/56944575535?text=Hola%2C%20quiero%20una%20evaluaci%C3%B3n%20personalizada%20de%20mi%20pared%20abdominal." target="_blank" rel="noopener noreferrer">Agenda tu evaluación</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="legal">
+      <b>Profesional responsable:</b> Dr. Joaquín Ramírez Sneberger, cirujano
+      plástico certificado por CONACEM en Cirugía Plástica y Reparadora.
+      Universidad de los Andes · Instituto Ivo Pitanguy, Río de Janeiro.
+    </p>
+    <p class="legal">
+      La información de este blog es referencial y no reemplaza la evaluación
+      médica presencial. Toda cirugía tiene riesgos, que se explican en detalle
+      durante la consulta y en el proceso de consentimiento informado.
+    </p>
+    <div class="redes">
+      <a href="/">Inicio</a>
+      <a href="https://wa.me/56944575535" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <a href="https://www.instagram.com/abdominoplastiapad" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.tiktok.com/@abdominoplastiapad" target="_blank" rel="noopener noreferrer">TikTok</a>
+      <a href="https://web.facebook.com/profile.php?id=61574757542211" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="https://open.spotify.com/show/3WAZH5wDXqHfwVPTGVhRtO" target="_blank" rel="noopener noreferrer">Podcast</a>
+    </div>
+    <p class="legal" style="margin-top:2.2rem">© 2026 Dr. Joaquín Ramírez Sneberger · abdominoplastiapad.com</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  if (matchMedia('(prefers-reduced-motion:reduce)').matches){
+    document.querySelectorAll('.rev').forEach(function(el){el.classList.add('visible')});
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  },{threshold:.12});
+  document.querySelectorAll('.rev').forEach(function(el){io.observe(el)});
+})();
+
+// Paralaje sutil de los folios del fondo
+(function(){
+  if (matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  var capas = [].slice.call(document.querySelectorAll('.folio'));
+  if (!capas.length) return;
+  var pedido = false;
+  function pinta(){
+    pedido = false;
+    var vc = innerHeight/2;
+    capas.forEach(function(el){
+      var r = el.parentElement.getBoundingClientRect();
+      var d = r.top + r.height/2 - vc;
+      var t = Math.max(-52, Math.min(52, d*-0.04));
+      el.style.transform = 'translateY(' + t.toFixed(1) + 'px)';
+    });
+  }
+  addEventListener('scroll', function(){
+    if (!pedido){ pedido = true; requestAnimationFrame(pinta); }
+  }, {passive:true});
+  pinta();
+})();
+</script>
+
+</body>
+</html>
