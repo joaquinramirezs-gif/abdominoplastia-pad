@@ -168,6 +168,30 @@ nav .btn:hover{color:#2E3033}
 .cifra p{font-size:.9rem;color:var(--grey);margin-top:.5rem}
 .nota{font-size:.85rem;color:var(--grey);margin-top:2rem;max-width:70ch}
 
+/* ── Lo que paga la paciente ── */
+.paga{margin-top:3rem;border:1px solid var(--linea)}
+.paga-cab{
+  padding:1.1rem 1.8rem;border-bottom:1px solid var(--linea);
+  font-size:.7rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--sage-deep);background:var(--paper);
+}
+.paga-grid{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1px;background:var(--linea);
+}
+@media (max-width:720px){.paga-grid{grid-template-columns:1fr}}
+.paga-grid>div{background:var(--sage-mist);padding:2.2rem 1.8rem}
+.paga-grid .que{
+  display:block;font-size:.7rem;font-weight:500;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--sage-deep);margin-bottom:.9rem;
+}
+.paga-grid .numero{
+  display:block;font-weight:200;line-height:1.1;
+  font-size:clamp(2.2rem,1.6rem + 2.4vw,3.4rem);
+}
+.paga-grid p{font-size:.93rem;color:var(--grey);margin-top:.8rem}
+.paga-grid b{font-weight:500;color:var(--ink)}
+
 /* ── Criterios ── */
 .criterios ul{list-style:none;margin-top:1rem}
 .criterios li{
@@ -429,32 +453,31 @@ main section>.wrap{position:relative;z-index:1}
         convenio. La mitad la cubre Fonasa; el copago restante puede financiarse
         en gran parte con el préstamo médico de Fonasa.
       </p>
-      <div class="lista dos rev">
-        <div class="cifra">
-          <span class="que">Valor total del procedimiento</span>
-          <span class="numero">$3.583.580</span>
-          <p>Honorarios, pabellón y hospitalización incluidos.</p>
-        </div>
-        <div class="cifra">
-          <span class="que">Copago de la paciente</span>
-          <span class="numero">$1.791.790</span>
-          <p>Lo que corresponde pagar con el bono PAD.</p>
-        </div>
-        <div class="cifra">
-          <span class="que">Préstamo médico Fonasa</span>
-          <span class="numero">hasta $1.523.020</span>
-          <p>Hasta el 85% del copago, pagadero en cuotas a Fonasa.</p>
-        </div>
-        <div class="cifra">
-          <span class="que">Para el día de la cirugía</span>
-          <span class="numero">desde $268.769</span>
-          <p>El mínimo a pagar al comprar el bono si se usa el préstamo completo.</p>
+      <div class="paga rev">
+        <div class="paga-cab">La paciente paga una de estas dos cifras</div>
+        <div class="paga-grid">
+          <div>
+            <span class="que">Sin préstamo</span>
+            <span class="numero">$1.791.790</span>
+            <p>El copago completo del bono PAD, pagado al comprarlo.
+            <b>Es el único pago</b> — no hay cuentas después.</p>
+          </div>
+          <div>
+            <span class="que">Con préstamo médico de Fonasa</span>
+            <span class="numero">$268.769</span>
+            <p>Es lo que pagas al comprar el bono. El resto del copago
+            —<b>$1.523.020</b>, hasta el 85%— te lo presta Fonasa y se
+            devuelve en cuotas.</p>
+          </div>
         </div>
       </div>
       <p class="nota rev">
         Valores referenciales del arancel PAD de Fonasa (código 2505950),
-        sujetos a actualización por Fonasa. El acceso al préstamo médico y su
-        monto dependen de la evaluación que hace Fonasa en cada caso.
+        sujetos a actualización. El valor total del procedimiento es
+        $3.583.580 —honorarios, pabellón y hospitalización incluidos— y Fonasa
+        cubre la mitad; el copago es la otra mitad. El acceso al préstamo
+        médico y su monto dependen de la evaluación que hace Fonasa en cada
+        caso.
       </p>
     </div>
   </section>
