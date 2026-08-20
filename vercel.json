@@ -5,6 +5,7 @@
   "buildCommand": "echo sitio estatico, sin build",
   "outputDirectory": "publicar",
   "cleanUrls": true,
+  "trailingSlash": false,
   "redirects": [
     {
       "source": "/blog/preguntas-frecuentes-pad",
