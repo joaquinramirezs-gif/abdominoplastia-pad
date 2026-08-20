@@ -10,6 +10,111 @@
       "source": "/blog/preguntas-frecuentes-pad",
       "destination": "/preguntas-frecuentes",
       "permanent": true
+    },
+    {
+      "source": "/que-es-la-abdominoplastia-pad",
+      "destination": "/#que-es",
+      "permanent": true
+    },
+    {
+      "source": "/valores-y-bono-pad-fonasa",
+      "destination": "/#bono",
+      "permanent": true
+    },
+    {
+      "source": "/proceso-abdominoplastia-pad",
+      "destination": "/#proceso",
+      "permanent": true
+    },
+    {
+      "source": "/sobre-el-dr-joaquin-ramirez",
+      "destination": "/#doctor",
+      "permanent": true
+    },
+    {
+      "source": "/contacto-abdominoplastia-pad",
+      "destination": "/#contacto",
+      "permanent": true
+    },
+    {
+      "source": "/post/quién-puede-operarse-con-el-bono-pad-requisitos-para-la-guatita-de-delantal",
+      "destination": "/blog/requisitos-bono-pad",
+      "permanent": true
+    },
+    {
+      "source": "/post/qui%C3%A9n-puede-operarse-con-el-bono-pad-requisitos-para-la-guatita-de-delantal",
+      "destination": "/blog/requisitos-bono-pad",
+      "permanent": true
+    },
+    {
+      "source": "/post/cómo-es-la-recuperación-después-de-una-abdominoplastia-pad-todo-lo-que-debes-saber",
+      "destination": "/blog/recuperacion-abdominoplastia",
+      "permanent": true
+    },
+    {
+      "source": "/post/c%C3%B3mo-es-la-recuperaci%C3%B3n-despu%C3%A9s-de-una-abdominoplastia-pad-todo-lo-que-debes-saber",
+      "destination": "/blog/recuperacion-abdominoplastia",
+      "permanent": true
+    },
+    {
+      "source": "/post/plicaturas-abdominales-más-allá-de-la-corrección-de-la-diastasis-de-rectos",
+      "destination": "/blog/plicaturas-abdominales",
+      "permanent": true
+    },
+    {
+      "source": "/post/plicaturas-abdominales-m%C3%A1s-all%C3%A1-de-la-correcci%C3%B3n-de-la-diastasis-de-rectos",
+      "destination": "/blog/plicaturas-abdominales",
+      "permanent": true
+    },
+    {
+      "source": "/post/preguntas-frecuentes-sobre-la-abdominoplastia-pad-y-la-guatita-de-delantal",
+      "destination": "/preguntas-frecuentes",
+      "permanent": true
+    },
+    {
+      "source": "/post/cuánto-cuesta-la-abdominoplastia-con-el-bono-pad-de-fonasa-en-chile",
+      "destination": "/#bono",
+      "permanent": true
+    },
+    {
+      "source": "/post/cu%C3%A1nto-cuesta-la-abdominoplastia-con-el-bono-pad-de-fonasa-en-chile",
+      "destination": "/#bono",
+      "permanent": true
+    },
+    {
+      "source": "/post/qué-es-la-guatita-de-delantal-y-cómo-operarse-con-el-bono-pad-de-fonasa",
+      "destination": "/#que-es",
+      "permanent": true
+    },
+    {
+      "source": "/post/qu%C3%A9-es-la-guatita-de-delantal-y-c%C3%B3mo-operarse-con-el-bono-pad-de-fonasa",
+      "destination": "/#que-es",
+      "permanent": true
+    },
+    {
+      "source": "/en",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/pt",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/en/:resto*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/pt/:resto*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/post/:resto*",
+      "destination": "/blog",
+      "permanent": true
     }
   ]
 }
