@@ -106,6 +106,37 @@ Spotify (`show/3WAZH5wDXqHfwVPTGVhRtO`).
   eligió la variante del propio sitio más coherente, no un juicio médico
   nuevo.
 
+## SEO — segunda pasada (2026-08-20)
+
+Correcciones sobre el sitio ya en vivo, tras la auditoría de posicionamiento y
+visibilidad en IA:
+- **Fechas visibles junto a las cifras** — «Vigencia agosto de 2026» en el
+  bloque del bono (con `<time datetime="2026-08">`) y en la nota al pie. Es lo
+  que permite a un modelo de lenguaje citar los valores con confianza.
+- **Nodo `WebSite`** en el grafo de la portada, con `isPartOf` desde la
+  `MedicalWebPage`, más `datePublished`/`dateModified`.
+- **`Physician` con `jobTitle` (CONACEM) y `sameAs`**: drjoaquinramirez.cl,
+  leblonplasticsurgery.cl, Instagram, TikTok, Facebook y el podcast de Spotify.
+  El autor de los artículos y del FAQ también lleva `jobTitle` y `url`.
+- **`FAQPage` con fechas y autor**, y etiqueta visible «actualizado agosto 2026».
+- **`datePublished` `2026-04` → `2026-04-01`** (ISO 8601 válido) en `blog.html`
+  y en `blog/requisitos-bono-pad.html`.
+- **`og:image` de `/blog`** apuntaba al espejo `abdominoplastia-pad.vercel.app`
+  → corregido al dominio real.
+- **Títulos alineados a cómo se busca**: «bono PAD» y «plicatura abdominal» al
+  frente; etiquetas de fecha «Actualizado agosto 2026» en el blog y los tres
+  artículos (antes decían «Abril 2026», en contradicción con el schema).
+- **`trailingSlash: false`** en `vercel.json` — `/blog/x/` daba 200 con el logo
+  roto; ahora hace 308 a la URL canónica.
+- `sitemap.xml` con `lastmod` 2026-08-20.
+
+**Lo que quedó fuera de esta pasada** (requiere decisión o acción del doctor):
+página propia de valores, artículo sobre la Ley Saín / vía pública, nombrar la
+clínica donde se opera en el texto visible, citar fuentes oficiales
+(fonasa.cl, Ley 21.438, registro CONACEM), enlaces desde drjoaquinramirez.cl y
+leblonplasticsurgery.cl, ficha de Google Business Profile, y el alta en Search
+Console + la etiqueta GA4.
+
 ## SEO (2026-08-18)
 
 Paquete aplicado tras auditoría multi-agente (19 hallazgos corregidos):
