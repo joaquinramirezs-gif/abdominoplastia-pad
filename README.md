@@ -1,9 +1,22 @@
 # Abdominoplastia PAD — abdominoplastiapad.com
 
-> 🌐 **Publicado en Vercel: <https://abdominoplastia-pad.vercel.app>** (desde el
-> 2026-08-18). Repo: `github.com/joaquinramirezs-gif/abdominoplastia-pad`,
-> proyecto Vercel `abdominoplastia-pad` (equipo joaquin20). **No toca el
-> dominio real**, que sigue en Wix — mismo esquema paralelo que Leblon y JR.
+> 🌐 **EN VIVO en <https://www.abdominoplastiapad.com>** desde el **2026-08-19**.
+> Repo: `github.com/joaquinramirezs-gif/abdominoplastia-pad`, proyecto Vercel
+> `abdominoplastia-pad` (equipo joaquin20). Espejo:
+> <https://abdominoplastia-pad.vercel.app>.
+>
+> **El dominio sigue registrado en Wix** (renovación 25 mar 2030) y Wix sigue
+> siendo el **servidor DNS** — solo se cambiaron dos registros para apuntar a
+> Vercel. Se hizo así a propósito: mantener la zona en Wix deja **DNSSEC
+> válido** y el **correo Google Workspace intacto**.
+>
+> | Registro | Antes (Wix) | Ahora (Vercel) |
+> |---|---|---|
+> | `A` @ | 185.230.63.107 / .186 / .171 | **216.198.79.1** |
+> | `CNAME` www | cdn1.wixdns.net | **32f71aa8def6956b.vercel-dns-017.com** |
+>
+> **Para revertir a Wix:** volver a poner los tres registros A y el CNAME de
+> arriba. Los MX, SPF, DKIM y DMARC **nunca se tocaron**.
 >
 > **Para publicar cambios:** editar las fuentes (`sitio-web.html`,
 > `blog.html`, `blog/*.html`), regenerar `publicar/` y hacer push:
