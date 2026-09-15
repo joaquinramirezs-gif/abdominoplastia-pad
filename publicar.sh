@@ -32,7 +32,8 @@ cat > publicar/sitemap.xml <<'MAPA'
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.abdominoplastiapad.com/</loc><lastmod>2026-08-20</lastmod><priority>1.0</priority></url>
   <url><loc>https://www.abdominoplastiapad.com/preguntas-frecuentes</loc><lastmod>2026-08-20</lastmod><priority>0.9</priority></url>
-  <url><loc>https://www.abdominoplastiapad.com/blog</loc><lastmod>2026-08-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.abdominoplastiapad.com/blog</loc><lastmod>2026-09-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.abdominoplastiapad.com/blog/programa-guatita-de-delantal-o-bono-pad</loc><lastmod>2026-09-15</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.abdominoplastiapad.com/blog/bono-pad-con-otras-cirugias</loc><lastmod>2026-08-20</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.abdominoplastiapad.com/blog/requisitos-bono-pad</loc><lastmod>2026-08-20</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.abdominoplastiapad.com/blog/recuperacion-abdominoplastia</loc><lastmod>2026-08-20</lastmod><priority>0.8</priority></url>
