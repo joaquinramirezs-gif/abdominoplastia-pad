@@ -36,7 +36,7 @@ aparte cuando se decida.
 | `preguntas-frecuentes.html` | **Página propia del FAQ** (10 preguntas) — es la única con `FAQPage` JSON-LD |
 | `privacidad.html` | Política de privacidad (Ley 19.628, con trato especial de datos de salud) |
 | `blog.html` | Índice del blog (portada + tarjetas) |
-| `blog/*.html` | Los 3 artículos, **una URL por artículo** (decisión SEO 2026-08-18): requisitos-bono-pad, recuperacion-abdominoplastia, plicaturas-abdominales |
+| `blog/*.html` | Los 6 artículos, **una URL por artículo** (decisión SEO 2026-08-18): requisitos-bono-pad, recuperacion-abdominoplastia, plicaturas-abdominales, bono-pad-con-otras-cirugias, programa-guatita-de-delantal-o-bono-pad, guatita-de-delantal-diastasis-o-grasa |
 | `publicar.sh` | Regenera `publicar/` reescribiendo los enlaces relativos a URLs limpias |
 | `icon-192.png` | Favicon cuadrado (monograma sobre crema) |
 | `JR-monograma-transparente.png` | Monograma JR (copiado de `dr-joaquin-ramirez/logos/`) |
@@ -105,6 +105,10 @@ Spotify (`show/3WAZH5wDXqHfwVPTGVhRtO`).
   **Pendiente que el doctor confirme** estos cuatro criterios clínicos: se
   eligió la variante del propio sitio más coherente, no un juicio médico
   nuevo.
+
+## SEO — artículos publicados
+
+- **2026-09-29:** se publicó `blog/guatita-de-delantal-diastasis-o-grasa` («¿Guatita de delantal, diástasis o grasa? Qué tienes y qué opera el bono PAD»), enlazado desde `/blog`, el bloque «sigue leyendo» de los demás artículos y el `sitemap.xml`.
 
 ## SEO — segunda pasada (2026-08-20)
 
