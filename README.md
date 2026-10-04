@@ -36,7 +36,7 @@ aparte cuando se decida.
 | `preguntas-frecuentes.html` | **Página propia del FAQ** (10 preguntas) — es la única con `FAQPage` JSON-LD |
 | `privacidad.html` | Política de privacidad (Ley 19.628, con trato especial de datos de salud) |
 | `blog.html` | Índice del blog (portada + tarjetas) |
-| `blog/*.html` | Los 6 artículos, **una URL por artículo** (decisión SEO 2026-08-18): requisitos-bono-pad, recuperacion-abdominoplastia, plicaturas-abdominales, bono-pad-con-otras-cirugias, programa-guatita-de-delantal-o-bono-pad, guatita-de-delantal-diastasis-o-grasa |
+| `blog/*.html` | Los 7 artículos, **una URL por artículo** (decisión SEO 2026-08-18): requisitos-bono-pad, recuperacion-abdominoplastia, plicaturas-abdominales, bono-pad-con-otras-cirugias, programa-guatita-de-delantal-o-bono-pad, guatita-de-delantal-diastasis-o-grasa, prestamo-medico-fonasa-bono-pad |
 | `publicar.sh` | Regenera `publicar/` reescribiendo los enlaces relativos a URLs limpias |
 | `icon-192.png` | Favicon cuadrado (monograma sobre crema) |
 | `JR-monograma-transparente.png` | Monograma JR (copiado de `dr-joaquin-ramirez/logos/`) |
@@ -109,6 +109,7 @@ Spotify (`show/3WAZH5wDXqHfwVPTGVhRtO`).
 ## SEO — artículos publicados
 
 - **2026-09-29:** se publicó `blog/guatita-de-delantal-diastasis-o-grasa` («¿Guatita de delantal, diástasis o grasa? Qué tienes y qué opera el bono PAD»), enlazado desde `/blog`, el bloque «sigue leyendo» de los demás artículos y el `sitemap.xml`.
+- **2026-10-04:** se publicó `blog/prestamo-medico-fonasa-bono-pad` («El préstamo médico de Fonasa, paso a paso»), con fuentes ChileAtiende y Fonasa. Estaba programado para el 22 de septiembre, pero esa tarea se abrió y se cerró sin ejecutar nada; se publicó a mano con la fecha real.
 
 ## SEO — segunda pasada (2026-08-20)
 
