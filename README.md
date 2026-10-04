@@ -41,6 +41,10 @@ aparte cuando se decida.
 | `icon-192.png` | Favicon cuadrado (monograma sobre crema) |
 | `JR-monograma-transparente.png` | Monograma JR (copiado de `dr-joaquin-ramirez/logos/`) |
 | `retrato-joaquin-ramirez.jpg` | Retrato del doctor (copiado de `dr-joaquin-ramirez/fotos/`, ya en sRGB) |
+| `hero-torso-claro.mp4` · `hero-torso-oscuro.mp4` | El video del inicio: bucle de 5,4 s, 960×1200, ~370 KB cada uno. Fondo blanco puro el claro, negro puro el oscuro |
+| `hero-torso-claro.jpg` · `hero-torso-oscuro.jpg` | La imagen fija del mismo hero (primer cuadro del bucle): lo que se ve antes del video, sin JavaScript o con «reducir movimiento» |
+| `herramientas/hero-video/componer.py` | Recompone los cuatro archivos del hero desde el clip original. Reproduce el resultado publicado bit a bit |
+| `material/` | **Fuera de git.** `hero-higgsfield/hf_20261004_031751_torso-seda.mp4`: el clip original de Higgsfield (8 MB) |
 
 ## Decisiones
 
@@ -74,12 +78,38 @@ aparte cuando se decida.
   barra dorada del monograma JR. Hilos y folios tienen paralaje sutil al hacer
   scroll (±52 px, `requestAnimationFrame`), anulado con
   `prefers-reduced-motion`. Sin sombras, sin degradados.
-- **Hero animado (2026-08-18):** contorno de torso femenino en trazo continuo
-  SVG —el gesto de la casa— que se dibuja solo al cargar
-  (`stroke-dashoffset`), con la línea baja discreta en dorado, flotación suave
-  y entrada escalonada del texto. En pantallas angostas la figura pasa a marca
-  de agua detrás del texto (`opacity .13`). Todo respeta
-  `prefers-reduced-motion` y funciona sin JavaScript (la figura queda dibujada).
+- **Hero con video (2026-10-04):** un fragmento de torso en yeso blanco,
+  envuelto en seda salvia, con una línea dorada fina de cadera a cadera. Es la
+  misma idea del hero anterior (contorno en trazo + línea dorada baja), llevada
+  a un objeto. Solo se mueve la seda. Reemplazó al contorno SVG que se dibujaba
+  solo (2026-08-18), que sigue en el historial de git.
+  - **De dónde sale:** imagen en Higgsfield con Nano Banana Pro (más una edición
+    para subir la seda hasta la línea dorada) y video con Kling 3.0, 10 s. Costó
+    25,5 créditos. Sin pacientes ni piel: es una escultura generada.
+  - **Por qué no tiene marco:** el video trae fondo **blanco puro** y la página
+    lo mezcla con `mix-blend-mode: multiply`; en tema oscuro, fondo **negro
+    puro** con `screen`. Así calza exacto en cualquier navegador. Igualar el
+    color de la página dentro del video no sirve: cada decodificador lo corre
+    2 o 3 niveles y aparece el rectángulo.
+  - **`.hero .wrap{z-index:auto}` es necesario.** La regla general
+    `main section>.wrap{z-index:1}` crea un contexto de apilamiento y la mezcla
+    deja de ver el fondo del hero: el video aparece como una caja.
+  - **La versión oscura no es otro video generado:** sale del mismo clip,
+    recomponiendo la seda sobre fondo oscuro. Mismo movimiento en los dos temas.
+  - **El bucle:** la seda repite su vaivén cada 130 cuadros; se funden 16 para
+    cerrar. La costura es menor que la diferencia entre dos cuadros seguidos.
+  - **Carga:** la imagen fija va por `<picture>` según el tema. El video parte
+    después del `load`, y solo sin `prefers-reduced-motion` ni ahorro de datos;
+    se pausa al salir de pantalla. Sin JavaScript queda la imagen.
+  - **En móvil** (≤ 880 px) la figura es una franja de borde a borde sobre el
+    título, y **los botones suben sobre el párrafo**: sin eso la franja empujaba
+    el llamado a la acción fuera de la primera pantalla.
+  - **Pendiente:** se revisó solo en Chromium. Falta verlo en Safari de iPhone.
+- **Menú que no desborda (2026-10-04):** entre 921 y ~1320 px de ancho el menú
+  se salía y el botón de WhatsApp quedaba fuera de pantalla (notebooks de 1280,
+  iPad horizontal). Ahora, en todas las páginas: bajo 1400 px se oculta el
+  subtítulo de la marca, bajo 1240 px queda solo el monograma, y los enlaces se
+  ocultan bajo 1000 px (antes 920).
 
 ## Contenido rescatado del sitio Wix actual (2026-08-18)
 
