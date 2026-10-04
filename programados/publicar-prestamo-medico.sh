@@ -1,6 +1,6 @@
 #!/bin/zsh
 # Publica el artículo «El préstamo médico de Fonasa, paso a paso», programado
-# para el 2026-09-22. Idempotente: si ya está publicado, no hace nada.
+# para el 2026-09-22 y publicado el 2026-10-04. Idempotente: si ya está publicado, no hace nada.
 # Uso:  ./programados/publicar-prestamo-medico.sh           → publica (commit + push)
 #       ./programados/publicar-prestamo-medico.sh --prueba  → ensayo, deja todo como estaba
 set -e
@@ -22,7 +22,7 @@ import io, sys
 SLUG = sys.argv[1]
 URL = f'https://www.abdominoplastiapad.com/blog/{SLUG}'
 TITULO = 'El préstamo médico de Fonasa, paso a paso'
-FECHA = '2026-09-22'
+FECHA = '2026-10-04'
 
 def edit(path, pairs):
     t = io.open(path, encoding='utf-8').read()
@@ -39,10 +39,9 @@ for f in sorted(glob.glob('blog/*.html')):
     edit(f, [(FAQ, ENL + FAQ, 1)])
 
 edit('blog.html', [
- ('''  {
-   "@type": "BlogPosting",
-   "headline": "Programa «guatita de delantal» o bono PAD: en qué se diferencian y cuál te conviene",''',
-  f'''  {{
+ (' "blogPost": [\n',
+  f''' "blogPost": [
+  {{
    "@type": "BlogPosting",
    "headline": "{TITULO}",
    "url": "{URL}",
@@ -56,27 +55,24 @@ edit('blog.html', [
     "url": "https://www.drjoaquinramirez.cl"
    }}
   }},
-  {{
-   "@type": "BlogPosting",
-   "headline": "Programa «guatita de delantal» o bono PAD: en qué se diferencian y cuál te conviene",''', 1),
- ('        <a href="blog/programa-guatita-de-delantal-o-bono-pad.html">',
-  f'''        <a href="blog/{SLUG}.html">
-          <span class="meta">Septiembre 2026 · 4 min</span>
+''', 1),
+ ('      <div class="indice sube" style="--d:.55s">\n',
+  f'''      <div class="indice sube" style="--d:.55s">
+        <a href="blog/{SLUG}.html">
+          <span class="meta">Octubre 2026 · 4 min</span>
           <h3>El préstamo médico de Fonasa, paso a paso</h3>
           <p>Quién puede pedirlo, qué exige Fonasa, cómo se pagan las cuotas y
           en qué orden hacer el trámite para que el copago baje a $268.769.</p>
         </a>
-        <a href="blog/programa-guatita-de-delantal-o-bono-pad.html">''', 1),
+''', 1),
 ])
 
 import re
 pm = io.open('publicar.sh', encoding='utf-8').read()
-pm, n = re.subn(r'(<loc>https://www\.abdominoplastiapad\.com/blog</loc><lastmod>)[0-9-]+', r'\g<1>' + FECHA, pm)
-assert n == 1; io.open('publicar.sh','w',encoding='utf-8').write(pm)
-edit('publicar.sh', [
- ('  <url><loc>https://www.abdominoplastiapad.com/blog/programa-guatita-de-delantal-o-bono-pad</loc>',
-  f'  <url><loc>{URL}</loc><lastmod>{FECHA}</lastmod><priority>0.8</priority></url>\n  <url><loc>https://www.abdominoplastiapad.com/blog/programa-guatita-de-delantal-o-bono-pad</loc>', 1),
-])
+pm, n = re.subn(r'(<loc>https://www\.abdominoplastiapad\.com/blog</loc><lastmod>)[0-9-]+(</lastmod><priority>[0-9.]+</priority></url>\n)',
+                lambda m: m.group(1) + FECHA + m.group(2) + f'  <url><loc>{URL}</loc><lastmod>{FECHA}</lastmod><priority>0.8</priority></url>\n', pm)
+assert n == 1
+io.open('publicar.sh','w',encoding='utf-8').write(pm); print("OK publicar.sh")
 PY
 
 ./publicar.sh
@@ -97,11 +93,12 @@ if [ $PRUEBA = 1 ]; then
   exit 0
 fi
 
-git rm -q "programados/$SLUG.html"
+git rm -qf "programados/$SLUG.html"
 git add -A
 git commit -q -m "Nuevo artículo: el préstamo médico de Fonasa, paso a paso
 
-Publicacion programada el 2026-09-15 para hoy. Quien puede pedirlo, requisitos
+Estaba programado para el 2026-09-22 y la tarea no llego a ejecutarse;
+se publica hoy con la fecha real. Quien puede pedirlo, requisitos
 de Fonasa (tramos B-C-D, cotizaciones al dia, codeudores), tope de cuota del
 10% del ingreso, forma de pago y el orden del tramite respecto del bono PAD.
 Fuentes: ChileAtiende y Fonasa, enlazadas al pie y como citation.
