@@ -32,15 +32,15 @@ ROBOTS
 cat > publicar/sitemap.xml <<'MAPA'
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.abdominoplastiapad.com/</loc><lastmod>2026-08-20</lastmod><priority>1.0</priority></url>
-  <url><loc>https://www.abdominoplastiapad.com/preguntas-frecuentes</loc><lastmod>2026-08-20</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.abdominoplastiapad.com/</loc><lastmod>2026-10-04</lastmod><priority>1.0</priority></url>
+  <url><loc>https://www.abdominoplastiapad.com/preguntas-frecuentes</loc><lastmod>2026-10-04</lastmod><priority>0.9</priority></url>
   <url><loc>https://www.abdominoplastiapad.com/blog</loc><lastmod>2026-10-04</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.abdominoplastiapad.com/blog/prestamo-medico-fonasa-bono-pad</loc><lastmod>2026-10-04</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.abdominoplastiapad.com/blog/guatita-de-delantal-diastasis-o-grasa</loc><lastmod>2026-09-29</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.abdominoplastiapad.com/blog/programa-guatita-de-delantal-o-bono-pad</loc><lastmod>2026-09-15</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.abdominoplastiapad.com/blog/bono-pad-con-otras-cirugias</loc><lastmod>2026-08-20</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.abdominoplastiapad.com/blog/requisitos-bono-pad</loc><lastmod>2026-08-20</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.abdominoplastiapad.com/blog/recuperacion-abdominoplastia</loc><lastmod>2026-08-20</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.abdominoplastiapad.com/blog/requisitos-bono-pad</loc><lastmod>2026-10-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.abdominoplastiapad.com/blog/recuperacion-abdominoplastia</loc><lastmod>2026-10-04</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.abdominoplastiapad.com/blog/plicaturas-abdominales</loc><lastmod>2026-08-20</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.abdominoplastiapad.com/privacidad</loc><lastmod>2026-08-20</lastmod><priority>0.3</priority></url>
 </urlset>
