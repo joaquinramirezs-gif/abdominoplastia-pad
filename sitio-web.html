@@ -108,7 +108,10 @@ nav a{
 nav a:hover{color:var(--sage-deep)}
 nav .btn{padding:.65rem 1.4rem;color:var(--gold-deep)}
 nav .btn:hover{color:#2E3033}
-@media (max-width:920px){nav a:not(.btn){display:none}}
+/* El menú completo necesita unos 1320 px. Bajo eso se achica la marca antes que el menú. */
+@media (min-width:1241px) and (max-width:1400px){.marca small{display:none} nav{gap:1.25rem}}
+@media (min-width:1001px) and (max-width:1240px){.marca span{display:none} nav{gap:1.15rem}}
+@media (max-width:1000px){nav a:not(.btn){display:none}}
 @media (max-width:600px){.marca span{display:none}}
 
 /* ── Hero ── */
@@ -125,16 +128,24 @@ nav .btn:hover{color:#2E3033}
 }
 .hero .dato b{font-weight:500;color:var(--ink)}
 
-/* La figura: contorno en un trazo, se dibuja al cargar */
-.figura{display:flex;justify-content:center;min-width:0}
-.figura svg{
-  width:min(100%,380px);height:auto;overflow:visible;
-  animation:flotar 9s ease-in-out 2.4s infinite;
+/* La figura: un torso de yeso con seda salvia y la línea dorada baja, en un
+   video en bucle. El video trae fondo blanco puro (negro puro en tema oscuro) y
+   se mezcla con el color de la página: por eso no tiene marco ni se nota el borde. */
+.hero .wrap{z-index:auto}   /* sin contexto de apilamiento propio: la mezcla necesita ver el fondo del hero */
+.figura{display:flex;justify-content:flex-start;min-width:0;pointer-events:none}
+.lienzo{
+  position:relative;flex:none;width:min(124%,540px);aspect-ratio:4/5;
+  mix-blend-mode:multiply;opacity:0;animation:aparecer 1.6s ease .15s forwards;
+  -webkit-mask-image:linear-gradient(to right,#000 72%,transparent 98%);
+          mask-image:linear-gradient(to right,#000 72%,transparent 98%);
 }
-.trazo{fill:none;stroke:var(--sage);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}
-.trazo.fino{stroke-width:3}
-.trazo.oro{stroke:var(--gold);stroke-width:2.5}
-@keyframes flotar{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.lienzo img,.lienzo video{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;
+}
+.lienzo video{opacity:0;transition:opacity .5s ease}
+.lienzo video.listo{opacity:1}
+@keyframes aparecer{to{opacity:1}}
+@media (prefers-color-scheme:dark){.lienzo{mix-blend-mode:screen}}
 
 /* Entrada escalonada del texto */
 @keyframes subir{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
@@ -145,13 +156,30 @@ nav .btn:hover{color:#2E3033}
 @media (prefers-reduced-motion:reduce){
   .sube{animation:none;opacity:1}
   .regla-anim{animation:none;width:56px}
-  .figura svg{animation:none}
+  .lienzo{animation:none;opacity:1}
 }
 @media (max-width:880px){
-  .hero .wrap{display:block}
-  .figura{position:absolute;right:-70px;top:24px;width:290px;opacity:.13;pointer-events:none}
-  .figura svg{width:100%}
-  .hero .dato{margin-top:3.4rem}
+  /* En pantallas angostas la figura es una franja de borde a borde sobre el
+     título, y los botones suben para quedar a la vista bajo el título. */
+  .hero{padding-top:0}
+  .hero .wrap{display:flex;flex-direction:column;align-items:stretch}
+  .figura{order:-1;display:block;margin:0 calc(-1*var(--gutter)) -1.1rem}
+  .lienzo{
+    width:100%;aspect-ratio:3/2;max-height:min(46vh,340px);
+    -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 8%,#000 80%,transparent 100%),linear-gradient(to right,#000 76%,transparent 100%);
+    -webkit-mask-composite:source-in;
+            mask-image:linear-gradient(to bottom,transparent 0,#000 8%,#000 80%,transparent 100%),linear-gradient(to right,#000 76%,transparent 100%);
+            mask-composite:intersect;
+  }
+  .lienzo img,.lienzo video{object-position:50% 54%}
+  .hero .regla{margin-bottom:1.5rem}
+  .hero-texto{display:flex;flex-direction:column}
+  .hero-texto .acciones{order:1;margin-top:1.9rem}
+  .hero p.intro{order:2;margin:2.1rem 0 0}
+  .hero .dato{margin-top:2.8rem}
+}
+@media (min-width:600px) and (max-width:880px){
+  .lienzo img,.lienzo video{object-position:50% 45%}
 }
 
 /* ── Grillas con separador de un pixel ── */
@@ -401,12 +429,14 @@ main section>.wrap{position:relative;z-index:1}
         </div>
       </div>
       <div class="figura" aria-hidden="true">
-        <svg viewBox="0 0 560 720" xmlns="http://www.w3.org/2000/svg" role="presentation">
-          <path class="trazo" d="M176 44 C158 112,170 178,198 246 C216 290,176 330,152 416 C136 486,150 580,184 678"/>
-          <path class="trazo" d="M396 88 C412 150,400 204,376 258 C358 300,400 342,424 424 C440 492,428 588,398 672"/>
-          <path class="trazo fino" d="M288 400 C286 408,286 416,288 424"/>
-          <path class="trazo oro" d="M196 568 C248 604,336 604,388 566"/>
-        </svg>
+        <div class="lienzo">
+          <picture>
+            <source media="(prefers-color-scheme:dark)" srcset="hero-torso-oscuro.jpg">
+            <img src="hero-torso-claro.jpg" alt="" width="960" height="1200" decoding="async" fetchpriority="high">
+          </picture>
+          <video muted loop playsinline preload="none" tabindex="-1" disablepictureinpicture
+                 data-claro="hero-torso-claro.mp4" data-oscuro="hero-torso-oscuro.mp4"></video>
+        </div>
       </div>
       <div class="dato sube" style="--d:.72s">
         <span><b>Código PAD</b> 2505950</span>
@@ -744,17 +774,31 @@ main section>.wrap{position:relative;z-index:1}
 <script>
 document.documentElement.classList.add('js');
 (function(){
-  // El contorno se dibuja solo al cargar la página
-  var trazos = document.querySelectorAll('.figura path');
-  if (trazos.length && !matchMedia('(prefers-reduced-motion:reduce)').matches){
-    trazos.forEach(function(p,i){
-      var L = p.getTotalLength();
-      p.style.strokeDasharray = L;
-      p.style.strokeDashoffset = L;
-      p.getBoundingClientRect();
-      p.style.transition = 'stroke-dashoffset 1.7s cubic-bezier(.4,0,.2,1) ' + (.4 + i*.38) + 's';
-      p.style.strokeDashoffset = '0';
-    });
+  // El video del hero parte cuando la página ya cargó, y solo si el visitante no
+  // pidió menos movimiento ni ahorro de datos. Sin JavaScript queda la imagen fija.
+  var v = document.querySelector('.lienzo video');
+  var ahorro = navigator.connection && navigator.connection.saveData;
+  if (v && !ahorro && !matchMedia('(prefers-reduced-motion:reduce)').matches){
+    var oscuro = matchMedia('(prefers-color-scheme:dark)');
+    var tocar = function(){ var p = v.play(); if (p && p.catch) p.catch(function(){}); };
+    var poner = function(){
+      var src = oscuro.matches ? v.dataset.oscuro : v.dataset.claro;
+      if (v.getAttribute('src') === src) return;
+      v.classList.remove('listo');
+      v.src = src;
+      tocar();
+    };
+    v.muted = true;
+    v.addEventListener('playing', function(){ v.classList.add('listo'); });
+    if (oscuro.addEventListener) oscuro.addEventListener('change', poner);
+    else if (oscuro.addListener) oscuro.addListener(poner);
+    if (document.readyState === 'complete') poner(); else addEventListener('load', poner);
+    if ('IntersectionObserver' in window){
+      new IntersectionObserver(function(en){
+        if (!v.getAttribute('src')) return;
+        if (en[0].isIntersecting) tocar(); else v.pause();
+      }).observe(v);
+    }
   }
   if (matchMedia('(prefers-reduced-motion:reduce)').matches){
     document.querySelectorAll('.rev').forEach(function(el){el.classList.add('visible')});

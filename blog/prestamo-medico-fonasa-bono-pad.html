@@ -140,7 +140,10 @@ nav a:hover{color:var(--sage-deep)}
 nav .actual{color:var(--sage-deep)}
 nav .btn{padding:.65rem 1.4rem;color:var(--gold-deep)}
 nav .btn:hover{color:#2E3033}
-@media (max-width:920px){nav a:not(.btn){display:none}}
+/* El menú completo necesita unos 1320 px. Bajo eso se achica la marca antes que el menú. */
+@media (min-width:1241px) and (max-width:1400px){.marca small{display:none} nav{gap:1.25rem}}
+@media (min-width:1001px) and (max-width:1240px){.marca span{display:none} nav{gap:1.15rem}}
+@media (max-width:1000px){nav a:not(.btn){display:none}}
 @media (max-width:600px){.marca span{display:none}}
 
 /* ── Fondo: folios, hilos y el filete del monograma ── */

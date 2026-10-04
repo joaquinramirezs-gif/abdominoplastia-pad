@@ -19,6 +19,8 @@ for f in sitio-web.html blog.html preguntas-frecuentes.html privacidad.html; do
 done
 for f in blog/*.html; do limpia_blog "$f" > "publicar/$f"; done
 cp JR-monograma-transparente.png retrato-joaquin-ramirez.jpg icon-192.png publicar/
+# El hero: video en bucle y su imagen fija, en versión clara y oscura
+cp hero-torso-claro.mp4 hero-torso-oscuro.mp4 hero-torso-claro.jpg hero-torso-oscuro.jpg publicar/
 
 cat > publicar/robots.txt <<'ROBOTS'
 User-agent: *
