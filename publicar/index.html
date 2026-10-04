@@ -129,8 +129,9 @@ nav .btn:hover{color:#2E3033}
 .hero .dato b{font-weight:500;color:var(--ink)}
 
 /* La figura: un torso de yeso con seda salvia y la línea dorada baja, en un
-   video en bucle. El video trae fondo blanco puro (negro puro en tema oscuro) y
-   se mezcla con el color de la página: por eso no tiene marco ni se nota el borde. */
+   video en bucle. Al llegar (una vez por visita) lo precede la Venus de Milo, que
+   se vuelve ese torso. Los videos traen fondo blanco puro (negro puro en tema
+   oscuro) y se mezclan con el color de la página: por eso no tienen marco. */
 .hero .wrap{z-index:auto}   /* sin contexto de apilamiento propio: la mezcla necesita ver el fondo del hero */
 .figura{display:flex;justify-content:flex-start;min-width:0;pointer-events:none}
 .lienzo{
@@ -144,6 +145,11 @@ nav .btn:hover{color:#2E3033}
 }
 .lienzo video{opacity:0;transition:opacity .5s ease}
 .lienzo video.listo{opacity:1}
+/* Mientras corre la Venus no se muestra la imagen fija (vuelve si la entrada no parte).
+   El empalme con el bucle es instantáneo: el último cuadro de la Venus es el previo al bucle. */
+.lienzo.entrada img{opacity:0}
+.lienzo .bucle.ya,.lienzo .venus.fuera{transition:none}
+.lienzo .venus.fuera{opacity:0}
 @keyframes aparecer{to{opacity:1}}
 @media (prefers-color-scheme:dark){.lienzo{mix-blend-mode:screen}}
 
@@ -434,8 +440,10 @@ main section>.wrap{position:relative;z-index:1}
             <source media="(prefers-color-scheme:dark)" srcset="hero-torso-oscuro.jpg">
             <img src="hero-torso-claro.jpg" alt="" width="960" height="1200" decoding="async" fetchpriority="high">
           </picture>
-          <video muted loop playsinline preload="none" tabindex="-1" disablepictureinpicture
+          <video class="bucle" muted loop playsinline preload="none" tabindex="-1" disablepictureinpicture
                  data-claro="hero-torso-claro.mp4" data-oscuro="hero-torso-oscuro.mp4"></video>
+          <video class="venus" muted playsinline preload="none" tabindex="-1" disablepictureinpicture
+                 data-claro="hero-venus-claro.mp4" data-oscuro="hero-venus-oscuro.mp4"></video>
         </div>
       </div>
       <div class="dato sube" style="--d:.72s">
@@ -774,30 +782,93 @@ main section>.wrap{position:relative;z-index:1}
 <script>
 document.documentElement.classList.add('js');
 (function(){
-  // El video del hero parte cuando la página ya cargó, y solo si el visitante no
-  // pidió menos movimiento ni ahorro de datos. Sin JavaScript queda la imagen fija.
-  var v = document.querySelector('.lienzo video');
+  // El hero: al llegar, la Venus de Milo se vuelve el torso (una vez por visita) y sigue
+  // el bucle. Solo si el visitante no pidió menos movimiento ni ahorro de datos; sin
+  // JavaScript, o si la Venus no alcanza a partir en 3 s, queda la imagen fija del torso.
+  var lienzo = document.querySelector('.lienzo');
+  var v = lienzo && lienzo.querySelector('.bucle');
+  var venus = lienzo && lienzo.querySelector('.venus');
   var ahorro = navigator.connection && navigator.connection.saveData;
   if (v && !ahorro && !matchMedia('(prefers-reduced-motion:reduce)').matches){
     var oscuro = matchMedia('(prefers-color-scheme:dark)');
-    var tocar = function(){ var p = v.play(); if (p && p.catch) p.catch(function(){}); };
-    var poner = function(){
-      var src = oscuro.matches ? v.dataset.oscuro : v.dataset.claro;
+    var angosta = matchMedia('(max-width:880px)');
+    var fuente = function(el){ return oscuro.matches ? el.dataset.oscuro : el.dataset.claro; };
+    var tocar = function(el, mal){ var p = el.play(); if (p && p.catch) p.catch(mal || function(){}); };
+    var visible = true, entrada = false, plazo = 0, cuadro = 0;
+    var poner = function(){                      // el bucle, según el tema; en espera mientras corre la Venus
+      var src = fuente(v);
       if (v.getAttribute('src') === src) return;
       v.classList.remove('listo');
+      v.preload = 'auto';
       v.src = src;
-      tocar();
+      if (!entrada && visible) tocar(v);
+    };
+    var cerrar = function(){ entrada = false; clearTimeout(plazo); cancelAnimationFrame(cuadro); };
+    var abortar = function(){                    // la Venus no partió, o cambió el tema: directo al bucle
+      if (!entrada) return;
+      cerrar();
+      venus.classList.remove('listo'); venus.removeAttribute('src'); venus.load();
+      lienzo.classList.remove('entrada');
+      if (v.getAttribute('src') && visible) tocar(v);
+    };
+    var empalmar = function(){                   // la Venus termina en el cuadro previo al bucle: sigue sin corte
+      if (!entrada) return;
+      cerrar();
+      v.addEventListener('playing', function(){
+        v.classList.add('ya', 'listo');
+        var quitar = function(){ venus.classList.add('fuera'); venus.style.objectPosition = ''; };
+        if (v.requestVideoFrameCallback) v.requestVideoFrameCallback(quitar); else setTimeout(quitar, 100);
+      }, {once:true});
+      if (v.getAttribute('src')){ v.currentTime = 0; tocar(v); } else poner();
     };
     v.muted = true;
     v.addEventListener('playing', function(){ v.classList.add('listo'); });
-    if (oscuro.addEventListener) oscuro.addEventListener('change', poner);
-    else if (oscuro.addListener) oscuro.addListener(poner);
+
+    var vista = false;
+    try { vista = sessionStorage.getItem('venus') === '1'; } catch(e){}
+    if (venus && !vista){
+      entrada = true;
+      lienzo.classList.add('entrada');
+      venus.muted = true;
+      var bajar = function(){                    // en la franja del celular la vista baja de la cabeza al torso
+        var fin = parseFloat(getComputedStyle(v).objectPosition.split(' ')[1]) || 54;
+        var t = Math.min(1, Math.max(0, (venus.currentTime - 2) / 3)); t = t * t * (3 - 2 * t);
+        venus.style.objectPosition = '50% ' + (20 + (fin - 20) * t).toFixed(2) + '%';
+        if (entrada) cuadro = requestAnimationFrame(bajar);
+      };
+      venus.addEventListener('playing', function(){
+        if (!entrada) return;
+        clearTimeout(plazo);
+        venus.classList.add('listo');
+        try { sessionStorage.setItem('venus', '1'); } catch(e){}
+      });
+      venus.addEventListener('ended', empalmar);
+      venus.addEventListener('error', abortar);
+      var partir = function(){                   // abierta en una pestaña de fondo, la Venus espera a que se mire
+        if (document.hidden) return;
+        document.removeEventListener('visibilitychange', partir);
+        if (!entrada) return;
+        if (angosta.matches) bajar();
+        venus.preload = 'auto';
+        venus.src = fuente(venus);
+        tocar(venus, abortar);
+        plazo = setTimeout(abortar, 3000);
+      };
+      document.addEventListener('visibilitychange', partir);
+      partir();
+    }
+
+    var cambio = function(){ abortar(); poner(); };
+    if (oscuro.addEventListener) oscuro.addEventListener('change', cambio);
+    else if (oscuro.addListener) oscuro.addListener(cambio);
     if (document.readyState === 'complete') poner(); else addEventListener('load', poner);
     if ('IntersectionObserver' in window){
       new IntersectionObserver(function(en){
-        if (!v.getAttribute('src')) return;
-        if (en[0].isIntersecting) tocar(); else v.pause();
-      }).observe(v);
+        visible = en[0].isIntersecting;
+        var el = entrada ? venus : v;
+        if (!el.getAttribute('src')) return;
+        if (visible) tocar(el, entrada ? abortar : null); else el.pause();
+      }).observe(lienzo);
     }
   }
   if (matchMedia('(prefers-reduced-motion:reduce)').matches){

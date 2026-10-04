@@ -43,8 +43,10 @@ aparte cuando se decida.
 | `retrato-joaquin-ramirez.jpg` | Retrato del doctor (copiado de `dr-joaquin-ramirez/fotos/`, ya en sRGB) |
 | `hero-torso-claro.mp4` · `hero-torso-oscuro.mp4` | El video del inicio: bucle de 5,4 s, 960×1200, ~370 KB cada uno. Fondo blanco puro el claro, negro puro el oscuro |
 | `hero-torso-claro.jpg` · `hero-torso-oscuro.jpg` | La imagen fija del mismo hero (primer cuadro del bucle): lo que se ve antes del video, sin JavaScript o con «reducir movimiento» |
+| `hero-venus-claro.mp4` · `hero-venus-oscuro.mp4` | La entrada del inicio: la Venus de Milo que se vuelve el torso, 7,0 s, 960×1200, ~420/460 KB. Termina en el cuadro previo al bucle |
 | `herramientas/hero-video/componer.py` | Recompone los cuatro archivos del hero desde el clip original. Reproduce el resultado publicado bit a bit |
-| `material/` | **Fuera de git.** `hero-higgsfield/hf_20261004_031751_torso-seda.mp4`: el clip original de Higgsfield (8 MB) |
+| `herramientas/hero-video/intro.py` | Compone la entrada de la Venus (claro y oscuro) desde su clip de Kling, usando `componer.py` para el empalme. También reproduce lo publicado bit a bit |
+| `material/` | **Fuera de git.** `hero-higgsfield/`: los clips originales de Higgsfield, `hf_20261004_031751_torso-seda.mp4` (8 MB) y `hf_20261004_121329_venus-intro.mp4` (5,4 MB) |
 
 ## Decisiones
 
@@ -105,6 +107,29 @@ aparte cuando se decida.
     título, y **los botones suben sobre el párrafo**: sin eso la franja empujaba
     el llamado a la acción fuera de la primera pantalla.
   - **Pendiente:** se revisó solo en Chromium. Falta verlo en Safari de iPhone.
+- **Entrada de la Venus de Milo (2026-10-04, pedida por el doctor):** al llegar,
+  en el mismo lugar del torso, aparece la Venus de Milo en yeso con la seda
+  salvia; se le desvanecen la cabeza y el busto, la seda baja a la cadera,
+  aparece la línea dorada y queda el torso del bucle. 7 s, una vez por visita.
+  - **De dónde sale:** Nano Banana Pro (la Venus con la luz y el fondo del torso)
+    y Kling 3.0 pro, 6 s, con cuadro inicial (la Venus) y **cuadro final = el
+    cuadro 56 del clip del torso**. Costó 22,5 créditos.
+  - **El filtro de Kling** rechazó la Venus con el busto descubierto: por eso
+    lleva la seda en el pecho. También rechazó la versión sobre negro, así que la
+    oscura sale del mismo clip, como el bucle (los rechazos no cobran créditos).
+  - **El empalme no se ve:** `intro.py` funde los últimos cuadros de Kling con el
+    cuadro 56 tal como lo compone `componer.py` y sigue con los cuadros 57 a 70;
+    el bucle parte en el 71. La página lanza el bucle en el `ended` de la Venus
+    y oculta la Venus apenas se pinta el primer cuadro del bucle.
+  - **Cuándo no aparece:** segunda visita en la misma sesión (`sessionStorage`),
+    «reducir movimiento», ahorro de datos, o si no alcanza a partir en 3 s (por
+    ejemplo, iPhone en modo de bajo consumo). En esos casos queda el torso, como
+    antes. Abierta en una pestaña de fondo, espera a que se mire.
+  - **Mientras corre, la imagen fija del torso no se muestra** (y no se vuelve a
+    mostrar: el bucle la tapa). Mostrarla después contaría como un LCP tardío.
+  - **En móvil** la franja parte en la cabeza (`object-position` 20 %) y baja
+    hasta la posición del bucle mientras ocurre la transformación.
+  - **Para volver a verla:** pestaña nueva (recargar la misma ya no la muestra).
 - **Menú que no desborda (2026-10-04):** entre 921 y ~1320 px de ancho el menú
   se salía y el botón de WhatsApp quedaba fuera de pantalla (notebooks de 1280,
   iPad horizontal). Ahora, en todas las páginas: bajo 1400 px se oculta el
